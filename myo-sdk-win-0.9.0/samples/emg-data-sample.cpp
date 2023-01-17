@@ -136,7 +136,7 @@ int main(int argc, char** argv)
         double frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() - start_time;
 
         if (frame_time < start_time + 5) {
-            std::Sleep();
+            Sleep((start_time + 5 - frame_time)/1000);
         }
 
         // Save file timestamp calculations
