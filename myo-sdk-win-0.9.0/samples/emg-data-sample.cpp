@@ -12,6 +12,8 @@
 #include <stdexcept>
 #include <stdio.h>
 #include <string>
+#include <time.h>
+//#include <timeapi.h>
 #include <Windows.h>  //<-- disable on linux system
 //#include <unistd.h> //<-- enable on linux system
 
@@ -20,9 +22,30 @@
 
 class DataCollector : public myo::DeviceListener {
 public:
-    DataCollector()
-    : emgSamples()
+   // DataCollector()
+    //: emgSamples()
+    //{
+   // }
+
+    void createCsvAcc(std::string filename) {
+        ACCfilename = filename;
+        std::fstream ACCfile;
+        ACCfile.open("Accelerometer.csv", std::ios_base::out);
+        if (!ACCfile.is_open()) {
+            std::cout << "failed to create" << ACCfilename << '\n';
+        }
+        else {
+            ACCfile << "Timestamp, Acceleration x, Acceleration y, Acceleration z" << std::endl;
+            std::cout << ACCfilename << "created" << std::endl;
+        }
+    }
+
+    void onConnect(myo::Myo* myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion)
     {
+        start_time = timestamp;
+        ACC_record_time = timestamp;
+        std::cout << "Myo Connection Successful" << '\n';
+        ACCfilename = "Accelerometer.csv";
     }
 
     // onUnpair() is called whenever the Myo is disconnected from Myo Connect by the user.
@@ -31,10 +54,50 @@ public:
         // We've lost a Myo.
         // Let's clean up some leftover state.
         emgSamples.fill(0);
+        accelSamples.fill(0);
     }
 
     // onEmgData() is called whenever a paired Myo has provided new EMG data, and EMG streaming is enabled.
-    void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t* emg)
+    void onAccelerometerData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float> & accel)
+    {
+        std::ostringstream oss;
+        oss << static_cast<float>((timestamp - start_time)/1000);
+        std::string time_string = oss.str();
+        ACC_data.append(time_string + ",");
+
+        accelSamples[0] = accel.x();
+        accelSamples[1] = accel.y();
+        accelSamples[2] = accel.z();
+
+        for (size_t i = 0; i < accelSamples.size(); i++) {
+            std::ostringstream oss;
+            oss << static_cast<float>(accelSamples[i]);
+            std::string accString = oss.str();
+            ACC_data.append(accString + ",");
+        }
+
+        ACC_data.append("\n");
+
+        if (timestamp - ACC_record_time > 1500000) {
+            //ACC_data.pop_back();
+
+            std::fstream ACC_out;
+            ACC_out.open(ACCfilename, std::ios_base::app);
+            if (!ACC_out.is_open()) {
+                std::cout << "failed to write" << ACCfilename << "\n";
+            }
+            else {
+                ACC_out << ACC_data;
+                std::cout << "Accelerometer file saved" << "\n";
+            }
+            ACC_record_time = timestamp;
+            ACC_data = "";
+            std::cout << "accel data:" << time_string << '\n';
+        }
+
+    }
+
+    void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t * emg)
     {
         for (int i = 0; i < 8; i++) {
             emgSamples[i] = emg[i];
@@ -56,11 +119,10 @@ public:
         // Print out the EMG data and loads data into emg_data for saving
         for (size_t i = 0; i < emgSamples.size(); i++) {
             std::ostringstream oss;
-            oss << static_cast<int>(emgSamples[i]);
+            oss << static_cast<float>(emgSamples[i]);
             std::string emgString = oss.str();
 
             emg_data.append(emgString + ',');
-
             std::cout << '[' << emgString << std::string(4 - emgString.size(), ' ') << ']';
         }
 
@@ -73,6 +135,17 @@ public:
 
     // The values of this array is set by onEmgData() above.
     std::array<int8_t, 8> emgSamples;
+    std::array<float, 3> accelSamples;
+
+    //time calcs
+    std::uint64_t start_time;
+    std::uint64_t ACC_record_time;
+
+    //Recording accelerometor data
+    std::string ACC_data;
+
+    //File names
+    std::string ACCfilename;
 };
 
 int main(int argc, char** argv)
@@ -110,60 +183,71 @@ int main(int argc, char** argv)
     // Hub::run() to send events to all registered device listeners.
     hub.addListener(&collector);
 
-    std:: string filename("tmp.csv");
+    std::string EMGfilename("EMG.csv");
     std:: fstream file_out;
 
-    file_out.open(filename, std::ios_base::out);
+    collector.createCsvAcc("Accelerometer.csv");
+
+    file_out.open(EMGfilename, std::ios_base::out);
     if (!file_out.is_open()) {
-        std::cout << "failed to create file" << filename << '\n';
+        std::cout << "failed to create" << EMGfilename << '\n';
     }
     else { 
-        file_out << "EMG Data,\n Timestamp, Electrode 1, Electrode 2, Electrode 3, Electrode 4, Electrode 5, Electrode 6, Electrode 7, Electrode 8" << std::endl;
-        std::cout << "tmp.csv created" << std::endl;
+        file_out << "Timestamp, Electrode 1, Electrode 2, Electrode 3, Electrode 4, Electrode 5, Electrode 6, Electrode 7, Electrode 8" << std::endl;
+        std::cout << EMGfilename << "created" << std::endl;
     }
 
+
     double start_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
-    double timestamp;
+    double timestamp = 0;
     double last_save_time = 0;
 
     std::string saved_output;
+    std::string last_output;
+    std::string temp_output;
 
     std::cout << start_time << std::endl;
 
+
     // Finally we enter our main loop.
     while (1) {
-        std::string temp_output;
-        double frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() - start_time;
+        //double frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() - start_time;
 
-        if (frame_time < start_time + 5) {
-            Sleep((start_time + 5 - frame_time)/1000);
-        }
+        //if (frame_time < timestamp + 5) {
+            //std::cout << "sleeped" << std::to_string((frame_time + 5 - timestamp) / 500) << "\n";
+            //timeBeginPeriod(1);
+            //Sleep((frame_time + 5 - timestamp));
+            //timeEndPeriod(1);
+        //}
 
         // Save file timestamp calculations
         timestamp = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() - start_time;
         std::cout << timestamp;
 
-        temp_output = std::to_string(timestamp) + ",";
         // In each iteration of our main loop, we run the Myo event loop for a set number of milliseconds.
         // In this case, we wish to update our display 50 times a second, so we run for 1000/20 milliseconds.
-        hub.runOnce(1);
+        hub.runOnce(10);
 
 
         // After processing events, we call the print() member function we defined above to print out the values we've
         // obtained from any events that have occurred.
-        temp_output.append(collector.print());
+        temp_output = collector.print();
 
-        saved_output.append(temp_output);
-
+        if (last_output != temp_output) {
+            saved_output.append(std::to_string(timestamp) + ",");
+            saved_output.append(temp_output);
+            last_output = temp_output;
+            std::cout << timestamp;
+        }
         // Save EMG data to specified CSV file
         if (timestamp - last_save_time > 1000) {
 
             saved_output.pop_back();
 
             std::fstream file_out;
-            file_out.open(filename, std::ios_base::app);
+            file_out.open(EMGfilename, std::ios_base::app);
             if (!file_out.is_open()) {
-                std::cout << "failed to write" << filename << "\n";
+                std::cout << "failed to write" << EMGfilename << "\n";
             }
             else {
                 file_out << saved_output << std::endl;
