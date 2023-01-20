@@ -27,10 +27,11 @@ public:
     //{
    // }
 
-    void createCsvAcc(std::string filename) {
+    void createCsvAcc(std::string filename) 
+    {
         ACCfilename = filename;
         std::fstream ACCfile;
-        ACCfile.open("Accelerometer.csv", std::ios_base::out);
+        ACCfile.open(ACCfilename, std::ios_base::out);
         if (!ACCfile.is_open()) {
             std::cout << "failed to create" << ACCfilename << '\n';
         }
@@ -40,10 +41,51 @@ public:
         }
     }
 
+    void createCsvEmg(std::string filename) 
+    {
+        EMGfilename = filename;
+        std::fstream EMGfile;
+        EMGfile.open(EMGfilename, std::ios_base::out);
+        if (!EMGfile.is_open()) {
+            std::cout << "failed to create" << EMGfilename << '\n';
+        }
+        else {
+            EMGfile << "Timestamp, Electrode 1, Electrode 2, Electrode 3, Electrode 4, Electrode 5, Electrode 6, Electrode 7, Electrode 8" << std::endl;
+            std::cout << EMGfilename << "created" << std::endl;
+        }
+    }
+
+    void createCsvGyro(std::string filename) 
+    {
+        Gyrofilename = filename;
+        std::fstream Gyrofile;
+        Gyrofile.open(Gyrofilename, std::ios_base::out);
+        if (!Gyrofile.is_open()) {
+            std::cout << "failed to create" << Gyrofilename << '\n';
+        }
+        else {
+            Gyrofile << "Timestamp, Rotation x, Rotation y, Rotation z" << std::endl;
+            std::cout << Gyrofilename << "created" << std::endl;
+        }
+    }
+
+    void createCsvOrient(std::string filename)
+    {
+        Orientfilename = filename;
+        std::fstream Orientfile;
+        Orientfile.open(Orientfilename, std::ios_base::out);
+        if (!Orientfile.is_open()) {
+            std::cout << "failed to create" << Orientfilename << '\n';
+        }
+        else {
+            Orientfile << "Timestamp, Angle x, Angle y, Angle z" << std::endl;
+            std::cout << Orientfilename << "created" << std::endl;
+        }
+    }
+
     void onConnect(myo::Myo* myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion)
     {
         start_time = timestamp;
-        ACC_record_time = timestamp;
         std::cout << "Myo Connection Successful" << '\n';
         ACCfilename = "Accelerometer.csv";
     }
@@ -65,6 +107,10 @@ public:
         std::string time_string = oss.str();
         ACC_data.append(time_string + ",");
 
+        ACC_recorded += 1;
+
+        std::cout << ACC_recorded << "\n";
+
         accelSamples[0] = accel.x();
         accelSamples[1] = accel.y();
         accelSamples[2] = accel.z();
@@ -78,9 +124,7 @@ public:
 
         ACC_data.append("\n");
 
-        if (timestamp - ACC_record_time > 1500000) {
-            //ACC_data.pop_back();
-
+        if (ACC_recorded > 50) {
             std::fstream ACC_out;
             ACC_out.open(ACCfilename, std::ios_base::app);
             if (!ACC_out.is_open()) {
@@ -90,7 +134,7 @@ public:
                 ACC_out << ACC_data;
                 std::cout << "Accelerometer file saved" << "\n";
             }
-            ACC_record_time = timestamp;
+            ACC_recorded = 0;
             ACC_data = "";
             std::cout << "accel data:" << time_string << '\n';
         }
@@ -99,8 +143,132 @@ public:
 
     void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t * emg)
     {
+
+        std::ostringstream oss;
+        oss << static_cast<float>((timestamp - start_time) / 1000);
+        std::string time_string = oss.str();
+        EMG_data.append(time_string + ",");
+
+        EMG_recorded += 1;
+
         for (int i = 0; i < 8; i++) {
             emgSamples[i] = emg[i];
+        }
+
+        for (size_t i = 0; i < emgSamples.size(); i++) {
+            std::ostringstream oss;
+            oss << static_cast<float>(emgSamples[i]);
+            std::string emgString = oss.str();
+
+            EMG_data.append(emgString + ',');
+        }
+
+        EMG_data.append("\n");
+
+        if (EMG_recorded > 200) {
+            std::fstream EMG_out;
+            EMG_out.open(EMGfilename, std::ios_base::app);
+            if (!EMG_out.is_open()) {
+                std::cout << "failed to write" << ACCfilename << "\n";
+            }
+            else {
+                EMG_out << EMG_data;
+                std::cout << "EMG file saved" << "\n";
+            }
+            EMG_recorded = 0;
+            EMG_data = "";
+        }
+
+    }
+
+    void onGyroscopeData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& gyro)
+    {
+        std::ostringstream oss;
+        oss << static_cast<float>((timestamp - start_time) / 1000);
+        std::string time_string = oss.str();
+        gyro_data.append(time_string + ",");
+
+        gyro_recorded += 1;
+
+        std::cout << gyro_recorded << "\n";
+
+        gyroSamples[0] = gyro.x();
+        gyroSamples[1] = gyro.y();
+        gyroSamples[2] = gyro.z();
+
+        for (size_t i = 0; i < gyroSamples.size(); i++) {
+            std::ostringstream oss;
+            oss << static_cast<float>(gyroSamples[i]);
+            std::string gyroString = oss.str();
+            gyro_data.append(gyroString + ",");
+        }
+
+        gyro_data.append("\n");
+
+        if (gyro_recorded > 50) {
+            std::fstream gyro_out;
+            gyro_out.open(Gyrofilename, std::ios_base::app);
+            if (!gyro_out.is_open()) {
+                std::cout << "failed to write" << Gyrofilename << "\n";
+            }
+            else {
+                gyro_out << gyro_data;
+                std::cout << "Gyroscope file saved" << "\n";
+            }
+            gyro_recorded = 0;
+            gyro_data = "";
+            std::cout << "gyro data:" << time_string << '\n';
+        }
+    }
+
+    void onOrientationData(myo::Myo* myo, uint64_t timestamp, const myo::Quaternion<float>& quat)
+    {   
+        using std::atan2;
+        using std::asin;
+        using std::sqrt;
+        using std::max;
+        using std::min;
+
+        std::ostringstream oss;
+        oss << static_cast<float>((timestamp - start_time) / 1000);
+        std::string time_string = oss.str();
+        orient_data.append(time_string + ",");
+
+        orient_recorded += 1;
+
+        std::cout << orient_recorded << "\n";
+
+        // Calculate Euler angles (roll, pitch, and yaw) from the unit quaternion.
+        orientSamples[0] = atan2(2.0f * (quat.w() * quat.x() + quat.y() * quat.z()),
+            1.0f - 2.0f * (quat.x() * quat.x() + quat.y() * quat.y()));
+
+        orientSamples[1] = asin(max(-1.0f, min(1.0f, 2.0f * (quat.w() * quat.y() - quat.z() * quat.x()))));
+
+        orientSamples[2] = atan2(2.0f * (quat.w() * quat.z() + quat.x() * quat.y()),
+            1.0f - 2.0f * (quat.y() * quat.y() + quat.z() * quat.z()));
+
+        for (size_t i = 0; i < orientSamples.size(); i++) {
+            std::ostringstream oss;
+            oss << static_cast<float>(orientSamples[i]);
+            std::string orientString = oss.str();
+            orient_data.append(orientString + ",");
+        }
+
+        orient_data.append("\n");
+
+        if (orient_recorded > 50) {
+            std::fstream orient_out;
+            orient_out.open(Orientfilename, std::ios_base::app);
+            if (!orient_out.is_open()) {
+                std::cout << "failed to write" << Orientfilename << "\n";
+            }
+            else {
+                orient_out << orient_data;
+                std::cout << "Orientation file saved" << "\n";
+            }
+            orient_recorded = 0;
+            orient_data = "";
+            std::cout << "orientation data:" << time_string << '\n';
         }
     }
 
@@ -108,11 +276,8 @@ public:
     // For this example, the functions overridden above are sufficient.
 
     // We define this function to print the current values that were updated by the on...() functions above.
-    std::string print()
+    void print()
     {
-        // Variable for data saving system
-        std::string emg_data;
-
         // Clear the current line on console
         //std::cout << '\r';
 
@@ -122,30 +287,42 @@ public:
             oss << static_cast<float>(emgSamples[i]);
             std::string emgString = oss.str();
 
-            emg_data.append(emgString + ',');
             std::cout << '[' << emgString << std::string(4 - emgString.size(), ' ') << ']';
         }
 
-        emg_data.append("\n");
-
         std::cout << std::flush << '\n';
-
-        return emg_data;
     }
 
-    // The values of this array is set by onEmgData() above.
-    std::array<int8_t, 8> emgSamples;
-    std::array<float, 3> accelSamples;
+    // Initializing variables
 
     //time calcs
     std::uint64_t start_time;
-    std::uint64_t ACC_record_time;
 
     //Recording accelerometor data
+    std::array<float, 3> accelSamples;
     std::string ACC_data;
+    int ACC_recorded = 0;
+
+    //Recording EMG data
+    std::array<int8_t, 8> emgSamples;
+    std::string EMG_data;
+    int EMG_recorded = 0;
+
+    //Recording gyroscope data
+    std::array<float, 3> gyroSamples;
+    std::string gyro_data;
+    int gyro_recorded = 0;
+
+    //Recording orientation data
+    std::array<float, 3> orientSamples;
+    std::string orient_data;
+    int orient_recorded = 0;
 
     //File names
     std::string ACCfilename;
+    std::string EMGfilename;
+    std::string Gyrofilename;
+    std::string Orientfilename;
 };
 
 int main(int argc, char** argv)
@@ -187,42 +364,12 @@ int main(int argc, char** argv)
     std:: fstream file_out;
 
     collector.createCsvAcc("Accelerometer.csv");
-
-    file_out.open(EMGfilename, std::ios_base::out);
-    if (!file_out.is_open()) {
-        std::cout << "failed to create" << EMGfilename << '\n';
-    }
-    else { 
-        file_out << "Timestamp, Electrode 1, Electrode 2, Electrode 3, Electrode 4, Electrode 5, Electrode 6, Electrode 7, Electrode 8" << std::endl;
-        std::cout << EMGfilename << "created" << std::endl;
-    }
-
-
-    double start_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
-    double timestamp = 0;
-    double last_save_time = 0;
-
-    std::string saved_output;
-    std::string last_output;
-    std::string temp_output;
-
-    std::cout << start_time << std::endl;
-
+    collector.createCsvEmg("EMG.csv");
+    collector.createCsvGyro("Gyroscope.csv");
+    collector.createCsvOrient("Orientation.csv");
 
     // Finally we enter our main loop.
-    while (1) {
-        //double frame_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() - start_time;
-
-        //if (frame_time < timestamp + 5) {
-            //std::cout << "sleeped" << std::to_string((frame_time + 5 - timestamp) / 500) << "\n";
-            //timeBeginPeriod(1);
-            //Sleep((frame_time + 5 - timestamp));
-            //timeEndPeriod(1);
-        //}
-
-        // Save file timestamp calculations
-        timestamp = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count() - start_time;
-        std::cout << timestamp;
+    while (1) { 
 
         // In each iteration of our main loop, we run the Myo event loop for a set number of milliseconds.
         // In this case, we wish to update our display 50 times a second, so we run for 1000/20 milliseconds.
@@ -231,32 +378,10 @@ int main(int argc, char** argv)
 
         // After processing events, we call the print() member function we defined above to print out the values we've
         // obtained from any events that have occurred.
-        temp_output = collector.print();
+        collector.print();
 
-        if (last_output != temp_output) {
-            saved_output.append(std::to_string(timestamp) + ",");
-            saved_output.append(temp_output);
-            last_output = temp_output;
-            std::cout << timestamp;
-        }
-        // Save EMG data to specified CSV file
-        if (timestamp - last_save_time > 1000) {
-
-            saved_output.pop_back();
-
-            std::fstream file_out;
-            file_out.open(EMGfilename, std::ios_base::app);
-            if (!file_out.is_open()) {
-                std::cout << "failed to write" << EMGfilename << "\n";
-            }
-            else {
-                file_out << saved_output << std::endl;
-                std::cout << "file saved" << "\n";
-            }
-            last_save_time = timestamp;
-            saved_output = "";
-        }
-    }
+     }
+  
 
     // If a standard exception occurred, we print out its message and exit.
     } catch (const std::exception& e) {
