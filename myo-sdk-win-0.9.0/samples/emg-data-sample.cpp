@@ -4,19 +4,12 @@
 // This sample illustrates how to use EMG data. EMG streaming is only supported for one Myo at a time.
 
 #include <array>
-#include <ctime>
-#include <chrono>
 #include <fstream>
 #include <iostream>
 #include <sstream>
 #include <stdexcept>
 #include <stdio.h>
 #include <string>
-#include <time.h>
-//#include <timeapi.h>
-#include <Windows.h>  //<-- disable on linux system
-//#include <unistd.h> //<-- enable on linux system
-
 
 #include <myo/myo.hpp>
 
