@@ -37,7 +37,7 @@ public:
         }
         else {
             ACCfile << "Timestamp, Acceleration x, Acceleration y, Acceleration z" << std::endl;
-            std::cout << ACCfilename << "created" << std::endl;
+            std::cout << ACCfilename << " created" << std::endl;
         }
     }
 
@@ -87,7 +87,6 @@ public:
     {
         start_time = timestamp;
         std::cout << "Myo Connection Successful" << '\n';
-        ACCfilename = "Accelerometer.csv";
     }
 
     // onUnpair() is called whenever the Myo is disconnected from Myo Connect by the user.
@@ -136,7 +135,7 @@ public:
             }
             ACC_recorded = 0;
             ACC_data = "";
-            std::cout << "accel data:" << time_string << '\n';
+            std::cout << ACCfilename << time_string << '\n';
         }
 
     }
@@ -146,6 +145,8 @@ public:
 
         std::ostringstream oss;
         oss << static_cast<float>((timestamp - start_time) / 1000);
+        //oss << static_cast<double>(timestamp);
+        //std::cout << timestamp;
         std::string time_string = oss.str();
         EMG_data.append(time_string + ",");
 
@@ -169,7 +170,7 @@ public:
             std::fstream EMG_out;
             EMG_out.open(EMGfilename, std::ios_base::app);
             if (!EMG_out.is_open()) {
-                std::cout << "failed to write" << ACCfilename << "\n";
+                std::cout << "failed to write" << EMGfilename << "\n";
             }
             else {
                 EMG_out << EMG_data;
@@ -208,6 +209,7 @@ public:
         if (gyro_recorded > 50) {
             std::fstream gyro_out;
             gyro_out.open(Gyrofilename, std::ios_base::app);
+
             if (!gyro_out.is_open()) {
                 std::cout << "failed to write" << Gyrofilename << "\n";
             }
@@ -215,6 +217,7 @@ public:
                 gyro_out << gyro_data;
                 std::cout << "Gyroscope file saved" << "\n";
             }
+
             gyro_recorded = 0;
             gyro_data = "";
             std::cout << "gyro data:" << time_string << '\n';
@@ -363,10 +366,10 @@ int main(int argc, char** argv)
     std::string EMGfilename("EMG.csv");
     std:: fstream file_out;
 
-    collector.createCsvAcc("Accelerometer.csv");
-    collector.createCsvEmg("EMG.csv");
-    collector.createCsvGyro("Gyroscope.csv");
-    collector.createCsvOrient("Orientation.csv");
+    collector.createCsvAcc("Output/Accelerometer.csv");
+    collector.createCsvEmg("Output/EMG.csv");
+    collector.createCsvGyro("Output/Gyroscope.csv");
+    collector.createCsvOrient("Output/Orientation.csv");
 
     // Finally we enter our main loop.
     while (1) { 
