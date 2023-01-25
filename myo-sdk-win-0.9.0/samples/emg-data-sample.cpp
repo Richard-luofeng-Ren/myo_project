@@ -6,6 +6,7 @@
 #include <array>
 #include <fstream>
 #include <iostream>
+#include <cmath>
 #include <sstream>
 #include <stdexcept>
 #include <stdio.h>
@@ -15,18 +16,19 @@
 
 class DataCollector : public myo::DeviceListener {
 public:
-   // DataCollector()
-    //: emgSamples()
-    //{
-   // }
+    // DataCollector()
+     //: emgSamples()
+     //{
+    // }
 
-    void createCsvAcc(std::string filename) 
+    void createCsvAcc(std::string filename)
     {
         ACCfilename = filename;
         std::fstream ACCfile;
         ACCfile.open(ACCfilename, std::ios_base::out);
         if (!ACCfile.is_open()) {
-            std::cout << "failed to create" << ACCfilename << '\n';
+            std::cout << "failed to create " << ACCfilename << '\n';
+            ACC_saving = false;
         }
         else {
             ACCfile << "Timestamp, Acceleration x, Acceleration y, Acceleration z" << std::endl;
@@ -34,31 +36,33 @@ public:
         }
     }
 
-    void createCsvEmg(std::string filename) 
+    void createCsvEmg(std::string filename)
     {
         EMGfilename = filename;
         std::fstream EMGfile;
         EMGfile.open(EMGfilename, std::ios_base::out);
         if (!EMGfile.is_open()) {
-            std::cout << "failed to create" << EMGfilename << '\n';
+            std::cout << "failed to create " << EMGfilename << '\n';
+            EMG_saving = false;
         }
         else {
             EMGfile << "Timestamp, Electrode 1, Electrode 2, Electrode 3, Electrode 4, Electrode 5, Electrode 6, Electrode 7, Electrode 8" << std::endl;
-            std::cout << EMGfilename << "created" << std::endl;
+            std::cout << EMGfilename << " created" << std::endl;
         }
     }
 
-    void createCsvGyro(std::string filename) 
+    void createCsvGyro(std::string filename)
     {
         Gyrofilename = filename;
         std::fstream Gyrofile;
         Gyrofile.open(Gyrofilename, std::ios_base::out);
         if (!Gyrofile.is_open()) {
-            std::cout << "failed to create" << Gyrofilename << '\n';
+            std::cout << "failed to create " << Gyrofilename << '\n';
+            gyro_saving = false;
         }
         else {
             Gyrofile << "Timestamp, Rotation x, Rotation y, Rotation z" << std::endl;
-            std::cout << Gyrofilename << "created" << std::endl;
+            std::cout << Gyrofilename << " created" << std::endl;
         }
     }
 
@@ -68,17 +72,17 @@ public:
         std::fstream Orientfile;
         Orientfile.open(Orientfilename, std::ios_base::out);
         if (!Orientfile.is_open()) {
-            std::cout << "failed to create" << Orientfilename << '\n';
+            std::cout << "failed to create " << Orientfilename << '\n';
+            orient_saving = false;
         }
         else {
             Orientfile << "Timestamp, Angle x, Angle y, Angle z" << std::endl;
-            std::cout << Orientfilename << "created" << std::endl;
+            std::cout << Orientfilename << " created" << std::endl;
         }
     }
 
     void onConnect(myo::Myo* myo, uint64_t timestamp, myo::FirmwareVersion firmwareVersion)
     {
-        start_time = timestamp;
         std::cout << "Myo Connection Successful" << '\n';
     }
 
@@ -92,16 +96,12 @@ public:
     }
 
     // onEmgData() is called whenever a paired Myo has provided new EMG data, and EMG streaming is enabled.
-    void onAccelerometerData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float> & accel)
+    void onAccelerometerData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& accel)
     {
-        std::ostringstream oss;
-        oss << static_cast<float>((timestamp - start_time)/1000);
-        std::string time_string = oss.str();
-        ACC_data.append(time_string + ",");
+        ACC_data.append(std::to_string(ACC_timstamp_calculated) + ",");
+        ACC_timstamp_calculated += 20;
 
         ACC_recorded += 1;
-
-        std::cout << ACC_recorded << "\n";
 
         accelSamples[0] = accel.x();
         accelSamples[1] = accel.y();
@@ -120,29 +120,36 @@ public:
             std::fstream ACC_out;
             ACC_out.open(ACCfilename, std::ios_base::app);
             if (!ACC_out.is_open()) {
-                std::cout << "failed to write" << ACCfilename << "\n";
+                ACC_saving = false;
             }
             else {
                 ACC_out << ACC_data;
-                std::cout << "Accelerometer file saved" << "\n";
             }
             ACC_recorded = 0;
             ACC_data = "";
-            std::cout << ACCfilename << time_string << '\n';
         }
 
     }
 
-    void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t * emg)
+    void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t* emg)
     {
+        //Adds timestamps
+        if (EMG_timestamp_repeat == true) {
+            if (EMG_last_timestamp != timestamp) {
+                EMG_data.append(std::to_string(EMG_timstamp_calculated) + ",");
+                EMG_timstamp_calculated += 5;
+                EMG_data.append(EMG_tmp);
+                lines_duplicated += 1;
+            }
+            EMG_timestamp_repeat = false;
+        }
+        else {
+            EMG_timestamp_repeat = true;
+        }
+        EMG_data.append(std::to_string(EMG_timstamp_calculated) + ",");
+        EMG_timstamp_calculated += 5;
 
-        std::ostringstream oss;
-        oss << static_cast<float>((timestamp - start_time) / 1000);
-        //oss << static_cast<double>(timestamp);
-        //std::cout << timestamp;
-        std::string time_string = oss.str();
-        EMG_data.append(time_string + ",");
-
+        EMG_last_timestamp = timestamp;
         EMG_recorded += 1;
 
         for (int i = 0; i < 8; i++) {
@@ -153,38 +160,34 @@ public:
             std::ostringstream oss;
             oss << static_cast<float>(emgSamples[i]);
             std::string emgString = oss.str();
-
             EMG_data.append(emgString + ',');
+            EMG_tmp.append(emgString + ',');
         }
 
         EMG_data.append("\n");
+        EMG_tmp.append("\n");
 
         if (EMG_recorded > 200) {
             std::fstream EMG_out;
             EMG_out.open(EMGfilename, std::ios_base::app);
             if (!EMG_out.is_open()) {
-                std::cout << "failed to write" << EMGfilename << "\n";
+                EMG_saving = false;
             }
             else {
                 EMG_out << EMG_data;
-                std::cout << "EMG file saved" << "\n";
+                //std::cout << "EMG file saved" << "\n";
             }
             EMG_recorded = 0;
             EMG_data = "";
         }
-
     }
 
     void onGyroscopeData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& gyro)
     {
-        std::ostringstream oss;
-        oss << static_cast<float>((timestamp - start_time) / 1000);
-        std::string time_string = oss.str();
-        gyro_data.append(time_string + ",");
+        gyro_data.append(std::to_string(gyro_timstamp_calculated) + ",");
+        gyro_timstamp_calculated += 20;
 
         gyro_recorded += 1;
-
-        std::cout << gyro_recorded << "\n";
 
         gyroSamples[0] = gyro.x();
         gyroSamples[1] = gyro.y();
@@ -204,35 +207,30 @@ public:
             gyro_out.open(Gyrofilename, std::ios_base::app);
 
             if (!gyro_out.is_open()) {
-                std::cout << "failed to write" << Gyrofilename << "\n";
+                gyro_saving = false;
             }
             else {
                 gyro_out << gyro_data;
-                std::cout << "Gyroscope file saved" << "\n";
+                //std::cout << "Gyroscope file saved" << "\n";
             }
 
             gyro_recorded = 0;
             gyro_data = "";
-            std::cout << "gyro data:" << time_string << '\n';
         }
     }
 
     void onOrientationData(myo::Myo* myo, uint64_t timestamp, const myo::Quaternion<float>& quat)
-    {   
+    {
         using std::atan2;
         using std::asin;
         using std::sqrt;
         using std::max;
         using std::min;
 
-        std::ostringstream oss;
-        oss << static_cast<float>((timestamp - start_time) / 1000);
-        std::string time_string = oss.str();
-        orient_data.append(time_string + ",");
+        orient_data.append(std::to_string(orient_timstamp_calculated) + ",");
+        orient_timstamp_calculated += 20;
 
         orient_recorded += 1;
-
-        std::cout << orient_recorded << "\n";
 
         // Calculate Euler angles (roll, pitch, and yaw) from the unit quaternion.
         orientSamples[0] = atan2(2.0f * (quat.w() * quat.x() + quat.y() * quat.z()),
@@ -256,62 +254,133 @@ public:
             std::fstream orient_out;
             orient_out.open(Orientfilename, std::ios_base::app);
             if (!orient_out.is_open()) {
-                std::cout << "failed to write" << Orientfilename << "\n";
+                orient_saving = false;
             }
             else {
                 orient_out << orient_data;
-                std::cout << "Orientation file saved" << "\n";
             }
             orient_recorded = 0;
             orient_data = "";
-            std::cout << "orientation data:" << time_string << '\n';
         }
+    }
+
+    void print() {
+        
+        for (int i = 0; i < 4; i++) {
+            std::cout << "\x1b[1A" << "\x1b[2K";
+        }
+        std::cout << "          EMG data:";
+        for (size_t i = 0; i < emgSamples.size(); i++) {
+
+            std::ostringstream oss;
+            oss << static_cast<float>(emgSamples[i]);
+            std::string emgString = oss.str();
+            std::cout << '[' << emgString << std::string(4 - emgString.size(), ' ') << ']';
+        }
+        if (EMG_saving == true) {
+            if (lines_duplicated > 0 && EMG_saving == true) {
+                std::cout << " " << lines_duplicated << " line(s) of problematic data!";
+            }
+            else {
+                std::cout << " data saving normal";
+            }
+        }
+        else {
+            std::cout << " ***data saving failed!***";
+        }
+        
+        std::cout << "\n";
+
+        std::cout << "Accelerometer data:";
+        for (size_t i = 0; i < accelSamples.size(); i++) {
+            float tmp;
+            tmp = accelSamples[i] * 1000;
+            tmp = round(tmp);
+            tmp = tmp / 1000;
+            std::string accelString = std::to_string(tmp);
+            accelString = accelString.substr(0, accelString.size() - 3);
+            std::cout << '[' << accelString << std::string(10 - accelString.size(), ' ') << ']';
+        }
+        if (ACC_saving == true) {
+            std::cout << "             data saving normal";
+        }
+        else {
+            std::cout << "             ***data saving failed!***";
+        }
+        std::cout << "\n";
+
+        std::cout << "    Gyroscope data:";
+        for (size_t i = 0; i < gyroSamples.size(); i++) {
+            float tmp;
+            tmp = gyroSamples[i] * 1000;
+            tmp = round(tmp);
+            tmp = tmp / 1000;
+            std::string gyroString = std::to_string(tmp);
+            gyroString = gyroString.substr(0, gyroString.size() - 3);
+            std::cout << '[' << gyroString << std::string(10 - gyroString.size(), ' ') << ']';
+        }
+        if (gyro_saving == true) {
+            std::cout << "             data saving normal";
+        }
+        else {
+            std::cout << "             ***data saving failed!***";
+        }
+        std::cout << "\n";
+
+        std::cout << "  Orientation data:";
+        for (size_t i = 0; i < orientSamples.size(); i++) {
+            float tmp;
+            tmp = orientSamples[i] * 1000;
+            tmp = round(tmp);
+            tmp = tmp / 1000;
+            std::string orientString = std::to_string(tmp);
+            orientString = orientString.substr(0, orientString.size() - 3);
+            std::cout << '[' << orientString << std::string(10 - orientString.size(), ' ') << ']';
+        }
+        if (orient_saving == true) {
+            std::cout << "             data saving normal";
+        }
+        else {
+            std::cout << "             ***data saving failed!***";
+        }
+        std::cout << "\n";
     }
 
     // There are other virtual functions in DeviceListener that we could override here, like onAccelerometerData().
     // For this example, the functions overridden above are sufficient.
 
-    // We define this function to print the current values that were updated by the on...() functions above.
-    void print()
-    {
-        // Clear the current line on console
-        //std::cout << '\r';
-
-        // Print out the EMG data and loads data into emg_data for saving
-        for (size_t i = 0; i < emgSamples.size(); i++) {
-            std::ostringstream oss;
-            oss << static_cast<float>(emgSamples[i]);
-            std::string emgString = oss.str();
-
-            std::cout << '[' << emgString << std::string(4 - emgString.size(), ' ') << ']';
-        }
-
-        std::cout << std::flush << '\n';
-    }
-
     // Initializing variables
 
-    //time calcs
-    std::uint64_t start_time;
-
     //Recording accelerometor data
-    std::array<float, 3> accelSamples;
+    std::array<float, 3> accelSamples = {0, 0, 0};
     std::string ACC_data;
+    bool ACC_saving = true;
+    int ACC_timstamp_calculated = 0;
     int ACC_recorded = 0;
 
     //Recording EMG data
-    std::array<int8_t, 8> emgSamples;
+    std::array<int8_t, 8> emgSamples = {0, 0, 0, 0, 0, 0, 0, 0};
     std::string EMG_data;
+    std::string EMG_tmp;
+    uint64_t EMG_last_timestamp = 0;
+    bool EMG_saving = true;
+    bool EMG_timestamp_repeat = false;
+    int EMG_timstamp_calculated = 0;
     int EMG_recorded = 0;
+    int lines_duplicated = 0;
 
     //Recording gyroscope data
-    std::array<float, 3> gyroSamples;
+    std::array<float, 3> gyroSamples = { 0, 0, 0 };
     std::string gyro_data;
+    bool gyro_saving = true;
+    int gyro_timstamp_calculated = 0;
     int gyro_recorded = 0;
 
     //Recording orientation data
-    std::array<float, 3> orientSamples;
+    std::array<float, 3> orientSamples = { 0, 0, 0 };
     std::string orient_data;
+    bool orient_saving = true;
+    int orient_timstamp_calculated = 0;
     int orient_recorded = 0;
 
     //File names
@@ -364,18 +433,25 @@ int main(int argc, char** argv)
     collector.createCsvGyro("Output/Gyroscope.csv");
     collector.createCsvOrient("Output/Orientation.csv");
 
+    std::cout << "\n\n\n\n";
+
+    int counter = 0;
+
     // Finally we enter our main loop.
-    while (1) { 
+    while (1) {
 
         // In each iteration of our main loop, we run the Myo event loop for a set number of milliseconds.
         // In this case, we wish to update our display 50 times a second, so we run for 1000/20 milliseconds.
         hub.runOnce(10);
 
-
         // After processing events, we call the print() member function we defined above to print out the values we've
         // obtained from any events that have occurred.
-        collector.print();
+        if (counter > 30) {
+            collector.print();
+            counter = 0;
+        }
 
+        counter += 1;
      }
   
 
