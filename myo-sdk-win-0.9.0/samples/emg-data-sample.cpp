@@ -9,9 +9,9 @@
 #include <cmath>
 #include <sstream>
 #include <stdexcept>
-#include <stdio.h>
 #include <string>
 
+#include <stdio.h>
 #include <myo/myo.hpp>
 
 class DataCollector : public myo::DeviceListener {
@@ -98,8 +98,12 @@ public:
     // onEmgData() is called whenever a paired Myo has provided new EMG data, and EMG streaming is enabled.
     void onAccelerometerData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& accel)
     {
-        ACC_data.append(std::to_string(ACC_timstamp_calculated) + ",");
-        ACC_timstamp_calculated += 20;
+        
+        if (collection_start == false){
+            return;
+        }
+
+        ACC_data.append(std::to_string(timstamp_calculated) + ",");
 
         ACC_recorded += 1;
 
@@ -133,11 +137,16 @@ public:
 
     void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t* emg)
     {
+
+        if (collection_start == false){
+            collection_start = true;
+        }
+
         //Adds timestamps
         if (EMG_timestamp_repeat == true) {
             if (EMG_last_timestamp != timestamp) {
-                EMG_data.append(std::to_string(EMG_timstamp_calculated) + ",");
-                EMG_timstamp_calculated += 5;
+                EMG_data.append(std::to_string(timstamp_calculated) + ",");
+                timstamp_calculated += 5;
                 EMG_data.append(EMG_tmp);
                 lines_duplicated += 1;
             }
@@ -146,8 +155,8 @@ public:
         else {
             EMG_timestamp_repeat = true;
         }
-        EMG_data.append(std::to_string(EMG_timstamp_calculated) + ",");
-        EMG_timstamp_calculated += 5;
+        EMG_data.append(std::to_string(timstamp_calculated) + ",");
+        timstamp_calculated += 5;
 
         EMG_last_timestamp = timestamp;
         EMG_recorded += 1;
@@ -163,7 +172,6 @@ public:
             EMG_data.append(emgString + ',');
             EMG_tmp.append(emgString + ',');
         }
-
         EMG_data.append("\n");
         EMG_tmp.append("\n");
 
@@ -184,8 +192,12 @@ public:
 
     void onGyroscopeData(myo::Myo* myo, uint64_t timestamp, const myo::Vector3<float>& gyro)
     {
-        gyro_data.append(std::to_string(gyro_timstamp_calculated) + ",");
-        gyro_timstamp_calculated += 20;
+
+        if (collection_start == false) {
+            return;
+        }
+
+        gyro_data.append(std::to_string(timstamp_calculated) + ",");
 
         gyro_recorded += 1;
 
@@ -227,8 +239,11 @@ public:
         using std::max;
         using std::min;
 
-        orient_data.append(std::to_string(orient_timstamp_calculated) + ",");
-        orient_timstamp_calculated += 20;
+        if (collection_start == false) {
+            return;
+        }
+
+        orient_data.append(std::to_string(timstamp_calculated) + ",");
 
         orient_recorded += 1;
 
@@ -351,11 +366,13 @@ public:
 
     // Initializing variables
 
+    bool collection_start = false;
+    int timstamp_calculated = 0;
+
     //Recording accelerometor data
     std::array<float, 3> accelSamples = {0, 0, 0};
     std::string ACC_data;
     bool ACC_saving = true;
-    int ACC_timstamp_calculated = 0;
     int ACC_recorded = 0;
 
     //Recording EMG data
@@ -365,7 +382,6 @@ public:
     uint64_t EMG_last_timestamp = 0;
     bool EMG_saving = true;
     bool EMG_timestamp_repeat = false;
-    int EMG_timstamp_calculated = 0;
     int EMG_recorded = 0;
     int lines_duplicated = 0;
 
@@ -373,14 +389,12 @@ public:
     std::array<float, 3> gyroSamples = { 0, 0, 0 };
     std::string gyro_data;
     bool gyro_saving = true;
-    int gyro_timstamp_calculated = 0;
     int gyro_recorded = 0;
 
     //Recording orientation data
     std::array<float, 3> orientSamples = { 0, 0, 0 };
     std::string orient_data;
     bool orient_saving = true;
-    int orient_timstamp_calculated = 0;
     int orient_recorded = 0;
 
     //File names
