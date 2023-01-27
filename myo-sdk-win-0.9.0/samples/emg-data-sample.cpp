@@ -103,7 +103,7 @@ public:
             return;
         }
 
-        ACC_data.append(std::to_string(timstamp_calculated) + ",");
+        ACC_data.append(std::to_string(timestamp_calculated) + ",");
 
         ACC_recorded += 1;
 
@@ -117,7 +117,7 @@ public:
             std::string accString = oss.str();
             ACC_data.append(accString + ",");
         }
-
+        ACC_data.pop_back();
         ACC_data.append("\n");
 
         if (ACC_recorded > 50) {
@@ -145,8 +145,8 @@ public:
         //Adds timestamps
         if (EMG_timestamp_repeat == true) {
             if (EMG_last_timestamp != timestamp) {
-                EMG_data.append(std::to_string(timstamp_calculated) + ",");
-                timstamp_calculated += 5;
+                EMG_data.append(std::to_string(timestamp_calculated) + ",");
+                timestamp_calculated += 5;
                 EMG_data.append(EMG_tmp);
                 lines_duplicated += 1;
             }
@@ -155,11 +155,13 @@ public:
         else {
             EMG_timestamp_repeat = true;
         }
-        EMG_data.append(std::to_string(timstamp_calculated) + ",");
-        timstamp_calculated += 5;
+        EMG_data.append(std::to_string(timestamp_calculated) + ",");
+        timestamp_calculated += 5;
 
         EMG_last_timestamp = timestamp;
         EMG_recorded += 1;
+
+        EMG_tmp = "";
 
         for (int i = 0; i < 8; i++) {
             emgSamples[i] = emg[i];
@@ -169,11 +171,12 @@ public:
             std::ostringstream oss;
             oss << static_cast<float>(emgSamples[i]);
             std::string emgString = oss.str();
-            EMG_data.append(emgString + ',');
             EMG_tmp.append(emgString + ',');
         }
-        EMG_data.append("\n");
+        EMG_tmp.pop_back();
         EMG_tmp.append("\n");
+        EMG_data.append(EMG_tmp);
+
 
         if (EMG_recorded > 200) {
             std::fstream EMG_out;
@@ -197,7 +200,7 @@ public:
             return;
         }
 
-        gyro_data.append(std::to_string(timstamp_calculated) + ",");
+        gyro_data.append(std::to_string(timestamp_calculated) + ",");
 
         gyro_recorded += 1;
 
@@ -211,7 +214,7 @@ public:
             std::string gyroString = oss.str();
             gyro_data.append(gyroString + ",");
         }
-
+        gyro_data.pop_back();
         gyro_data.append("\n");
 
         if (gyro_recorded > 50) {
@@ -243,7 +246,7 @@ public:
             return;
         }
 
-        orient_data.append(std::to_string(timstamp_calculated) + ",");
+        orient_data.append(std::to_string(timestamp_calculated) + ",");
 
         orient_recorded += 1;
 
@@ -262,7 +265,7 @@ public:
             std::string orientString = oss.str();
             orient_data.append(orientString + ",");
         }
-
+        orient_data.pop_back();
         orient_data.append("\n");
 
         if (orient_recorded > 50) {
@@ -280,8 +283,11 @@ public:
     }
 
     void print() {
+        if (collection_start == false) {
+            return;
+        }
         
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             std::cout << "\x1b[1A" << "\x1b[2K";
         }
         std::cout << "          EMG data:";
@@ -359,6 +365,15 @@ public:
             std::cout << "             ***data saving failed!***";
         }
         std::cout << "\n";
+
+        float output_time;
+        float float_time = timestamp_calculated;
+
+        output_time = float_time / 1000;
+        std::string output_string = std::to_string(output_time);
+
+        std::cout << "      Elapsed time:" << output_string.substr(0, output_string.size() - 3) << "\n";
+ 
     }
 
     // There are other virtual functions in DeviceListener that we could override here, like onAccelerometerData().
@@ -367,7 +382,7 @@ public:
     // Initializing variables
 
     bool collection_start = false;
-    int timstamp_calculated = 0;
+    int timestamp_calculated = 0;
 
     //Recording accelerometor data
     std::array<float, 3> accelSamples = {0, 0, 0};
