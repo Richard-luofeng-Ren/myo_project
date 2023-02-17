@@ -30,7 +30,7 @@ public:
             ACC_saving = false;
         }
         else {
-            ACCfile << "Timestamp, Acceleration x, Acceleration y, Acceleration z" << std::endl;
+            ACCfile << "Timestamp, Acceleration x, Acceleration y, Acceleration z, Marker" << std::endl;
             std::cout << ACCfilename << " created" << std::endl;
         }
     }
@@ -48,7 +48,7 @@ public:
             EMG_saving = false;
         }
         else {
-            EMGfile << "Timestamp, Electrode 1, Electrode 2, Electrode 3, Electrode 4, Electrode 5, Electrode 6, Electrode 7, Electrode 8" << std::endl;
+            EMGfile << "Timestamp, Electrode 1, Electrode 2, Electrode 3, Electrode 4, Electrode 5, Electrode 6, Electrode 7, Electrode 8, Marker" << std::endl;
             std::cout << EMGfilename << " created" << std::endl;
         }
     }
@@ -66,7 +66,7 @@ public:
             gyro_saving = false;
         }
         else {
-            Gyrofile << "Timestamp, Rotation x, Rotation y, Rotation z" << std::endl;
+            Gyrofile << "Timestamp, Rotation x, Rotation y, Rotation z, Marker" << std::endl;
             std::cout << Gyrofilename << " created" << std::endl;
         }
     }
@@ -84,7 +84,7 @@ public:
             orient_saving = false;
         }
         else {
-            Orientfile << "Timestamp, Angle x, Angle y, Angle z" << std::endl;
+            Orientfile << "Timestamp, Angle x, Angle y, Angle z, Marker" << std::endl;
             std::cout << Orientfilename << " created" << std::endl;
         }
     }
@@ -132,8 +132,17 @@ public:
             std::string accString = oss.str();
             ACC_data.append(accString + ",");
         }
-        //Some more formatting for CSV file compatibility
-        ACC_data.pop_back();
+        if (ACC_marker[0] != marker_amount[0]) {
+            ACC_data.append("1");
+        }
+        else {
+            if (ACC_marker[1] != marker_amount[1]) {
+                ACC_data.append("2");
+            }
+            else {
+                ACC_data.append("0");
+            }
+        }
         ACC_data.append("\n");
 
         //Saves the data in ACC_data into the selected CSV file
@@ -461,12 +470,14 @@ public:
     // Initializing variables
     bool collection_start = false;
     int timestamp_calculated = 0;
+    std::array<int, 2> marker_amount = { 0, 0 };
 
     //Recording accelerometor data
     std::array<float, 3> accelSamples = {0, 0, 0};
     std::string ACC_data;
     bool ACC_saving = true;
     int ACC_recorded = 0;
+    std::array<int, 2> ACC_marker = { 0, 0 };
 
     //Recording EMG data
     std::array<int8_t, 8> emgSamples = {0, 0, 0, 0, 0, 0, 0, 0};
@@ -477,18 +488,21 @@ public:
     bool EMG_timestamp_repeat = false;
     int EMG_recorded = 0;
     int lines_duplicated = 0;
+    std::array<int, 2> EMG_marker = { 0, 0 };
 
     //Recording gyroscope data
     std::array<float, 3> gyroSamples = { 0, 0, 0 };
     std::string gyro_data;
     bool gyro_saving = true;
     int gyro_recorded = 0;
+    std::array<int, 2> gyro_marker = {0, 0};
 
     //Recording orientation data
     std::array<float, 3> orientSamples = { 0, 0, 0 };
     std::string orient_data;
     bool orient_saving = true;
     int orient_recorded = 0;
+    std::array<int, 2> orient_marker = { 0, 0 };
 
     //File names
     std::string ACCfilename;
