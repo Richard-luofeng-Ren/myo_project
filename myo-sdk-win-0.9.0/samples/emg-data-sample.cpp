@@ -17,6 +17,15 @@
 class DataCollector : public myo::DeviceListener {
 public:
 
+    void addMarker(int type) {
+        if (type == 1) {
+            marker_amount[0] += 1;
+        }
+        if (type == 2) {
+            marker_amount[1] += 1;
+        }
+    }
+
     void createCsvAcc(std::string filename)
     {
         //Tells DataCollector to create csv file with filename 
@@ -110,7 +119,7 @@ public:
     {
         //Prevents function from recording data before EMG data is recieved.
         //As timestamp is calculated using onEmgData(), this prevents multiple 0 timestamps at start.
-        if (collection_start == false){
+        if (collection_start == false) {
             return;
         }
 
@@ -125,7 +134,7 @@ public:
         accelSamples[1] = accel.y();
         accelSamples[2] = accel.z();
 
-        //Converts accelSamples array into a string with CSV compatible formatting stored in ACC_data container
+        //Adds marker if number of marker required larger than number of markers added
         for (size_t i = 0; i < accelSamples.size(); i++) {
             std::ostringstream oss;
             oss << static_cast<float>(accelSamples[i]);
@@ -134,10 +143,12 @@ public:
         }
         if (ACC_marker[0] != marker_amount[0]) {
             ACC_data.append("1");
+            ACC_marker[0] += 1;
         }
         else {
             if (ACC_marker[1] != marker_amount[1]) {
                 ACC_data.append("2");
+                ACC_marker[1] += 1;
             }
             else {
                 ACC_data.append("0");
@@ -167,7 +178,7 @@ public:
     void onEmgData(myo::Myo* myo, uint64_t timestamp, const int8_t* emg)
     {
         //Allows data collection to start onece emg data is recieved
-        if (collection_start == false){
+        if (collection_start == false) {
             collection_start = true;
         }
 
@@ -199,7 +210,7 @@ public:
         //The same method is also used in MyoMex
         EMG_data.append(std::to_string(timestamp_calculated) + ",");
         timestamp_calculated += 5;
-        
+
         //Notes how many emg data points had been recored, this informs program of when to save data
         EMG_recorded += 1;
 
@@ -219,9 +230,23 @@ public:
             std::string emgString = oss.str();
             EMG_tmp.append(emgString + ',');
         }
-        //Some more formatting for CSV file compatibility
-        EMG_tmp.pop_back();
+
+        //Adds marker if number of marker required larger than number of markers added
+        if (EMG_marker[0] != marker_amount[0]) {
+            EMG_tmp.append("1");
+            EMG_marker[0] += 1;
+        }
+        else {
+            if (EMG_marker[1] != marker_amount[1]) {
+                EMG_tmp.append("2");
+                EMG_marker[1] += 1;
+            }
+            else {
+                EMG_tmp.append("0");
+            }
+        }
         EMG_tmp.append("\n");
+
         //Adds this data point as a new line to EMG_data, which records all string data awaiting output to CSV
         EMG_data.append(EMG_tmp);
 
@@ -268,8 +293,20 @@ public:
             std::string gyroString = oss.str();
             gyro_data.append(gyroString + ",");
         }
-        //Some more formatting for CSV file compatibility
-        gyro_data.pop_back();
+        //Adds marker if number of marker required larger than number of markers added
+        if (gyro_marker[0] != marker_amount[0]) {
+            gyro_data.append("1");
+            gyro_marker[0] += 1;
+        }
+        else {
+            if (gyro_marker[1] != marker_amount[1]) {
+                gyro_data.append("2");
+                gyro_marker[1] += 1;
+            }
+            else {
+                gyro_data.append("0");
+            }
+        }
         gyro_data.append("\n");
 
         //Saves the data in gyro_data into the selected CSV file
@@ -327,8 +364,20 @@ public:
             std::string orientString = oss.str();
             orient_data.append(orientString + ",");
         }
-        //Some more formatting for CSV file compatibility
-        orient_data.pop_back();
+        //Adds marker if number of marker required larger than number of markers added
+        if (orient_marker[0] != marker_amount[0]) {
+            orient_data.append("1");
+            orient_marker[0] += 1;
+        }
+        else {
+            if (orient_marker[1] != marker_amount[1]) {
+                orient_data.append("2");
+                orient_marker[1] += 1;
+            }
+            else {
+                orient_data.append("0");
+            }
+        }
         orient_data.append("\n");
 
         //Saves the data in orient_data into the selected CSV file
@@ -353,7 +402,7 @@ public:
         if (collection_start == false) {
             return;
         }
-        
+
         //Deletes last 5 lines of output so data output is not a mess
         for (int i = 0; i < 5; i++) {
             std::cout << "\x1b[1A" << "\x1b[2K";
@@ -382,7 +431,7 @@ public:
         else {
             std::cout << " ***data saving failed!***";
         }
-        
+
         //Adds new line for next row of output
         std::cout << "\n";
 
@@ -464,7 +513,7 @@ public:
 
         //Outputs the timestamp in seconds with trailing zeros removed
         std::cout << "      Elapsed time:" << output_string.substr(0, output_string.size() - 3) << "\n";
- 
+
     }
 
     // Initializing variables
@@ -473,14 +522,14 @@ public:
     std::array<int, 2> marker_amount = { 0, 0 };
 
     //Recording accelerometor data
-    std::array<float, 3> accelSamples = {0, 0, 0};
+    std::array<float, 3> accelSamples = { 0, 0, 0 };
     std::string ACC_data;
     bool ACC_saving = true;
     int ACC_recorded = 0;
     std::array<int, 2> ACC_marker = { 0, 0 };
 
     //Recording EMG data
-    std::array<int8_t, 8> emgSamples = {0, 0, 0, 0, 0, 0, 0, 0};
+    std::array<int8_t, 8> emgSamples = { 0, 0, 0, 0, 0, 0, 0, 0 };
     std::string EMG_data;
     std::string EMG_tmp;
     uint64_t EMG_last_timestamp = 0;
@@ -495,7 +544,7 @@ public:
     std::string gyro_data;
     bool gyro_saving = true;
     int gyro_recorded = 0;
-    std::array<int, 2> gyro_marker = {0, 0};
+    std::array<int, 2> gyro_marker = { 0, 0 };
 
     //Recording orientation data
     std::array<float, 3> orientSamples = { 0, 0, 0 };
@@ -516,67 +565,68 @@ int main(int argc, char** argv)
     // We catch any exceptions that might occur below -- see the catch statement for more details.
     try {
 
-    // First, we create a Hub with our application identifier. Be sure not to use the com.example namespace when
-    // publishing your application. The Hub provides access to one or more Myos.
-    myo::Hub hub("com.example.emg-data-sample");
-    
-    std::cout << "Attempting to find a Myo..." << std::endl;
+        // First, we create a Hub with our application identifier. Be sure not to use the com.example namespace when
+        // publishing your application. The Hub provides access to one or more Myos.
+        myo::Hub hub("com.example.emg-data-sample");
 
-    // Next, we attempt to find a Myo to use. If a Myo is already paired in Myo Connect, this will return that Myo
-    // immediately.
-    // waitForMyo() takes a timeout value in milliseconds. In this case we will try to find a Myo for 10 seconds, and
-    // if that fails, the function will return a null pointer.
-    myo::Myo* myo = hub.waitForMyo(10000);
+        std::cout << "Attempting to find a Myo..." << std::endl;
 
-    // If waitForMyo() returned a null pointer, we failed to find a Myo, so exit with an error message.
-    if (!myo) {
-        throw std::runtime_error("Unable to find a Myo!");
-    }
+        // Next, we attempt to find a Myo to use. If a Myo is already paired in Myo Connect, this will return that Myo
+        // immediately.
+        // waitForMyo() takes a timeout value in milliseconds. In this case we will try to find a Myo for 10 seconds, and
+        // if that fails, the function will return a null pointer.
+        myo::Myo* myo = hub.waitForMyo(10000);
 
-    // We've found a Myo.
-    std::cout << "Connected to a Myo armband!" << std::endl << std::endl;
-
-    // Next we enable EMG streaming on the found Myo.
-    myo->setStreamEmg(myo::Myo::streamEmgEnabled);
-
-    // Next we construct an instance of our DeviceListener, so that we can register it with the Hub.
-    DataCollector collector;
-
-    // Hub::addListener() takes the address of any object whose class inherits from DeviceListener, and will cause
-    // Hub::run() to send events to all registered device listeners.
-    hub.addListener(&collector);
-
-    // Creates the CSV files for data saving, this will overide any existing files
-    collector.createCsvAcc("Output/Accelerometer.csv");
-    collector.createCsvEmg("Output/EMG.csv");
-    collector.createCsvGyro("Output/Gyroscope.csv");
-    collector.createCsvOrient("Output/Orientation.csv");
-
-    // Quick and dirty way of preventing previous consol output from deleted by print()
-    std::cout << "\n\n\n\n\n";
-
-    // Initializes couter for console output
-    int counter = 0;
-
-    // Finally we enter our main loop.
-    while (1) {
-
-        // In each iteration of our main loop, we run the Myo event loop for a set number of milliseconds.
-        // In this case, we wish to update our display 50 times a second, so we run for 1000/20 milliseconds.
-        hub.runOnce(10);
-
-        // Updates the console output using data recieved at this moment 
-        // This is only done every 30 cycles of the main loop to improve legibility
-        if (counter > 30) {
-            collector.print();
-            counter = 0;
+        // If waitForMyo() returned a null pointer, we failed to find a Myo, so exit with an error message.
+        if (!myo) {
+            throw std::runtime_error("Unable to find a Myo!");
         }
-        counter += 1;
-     }
-  
 
-    // If a standard exception occurred, we print out its message and exit.
-    } catch (const std::exception& e) {
+        // We've found a Myo.
+        std::cout << "Connected to a Myo armband!" << std::endl << std::endl;
+
+        // Next we enable EMG streaming on the found Myo.
+        myo->setStreamEmg(myo::Myo::streamEmgEnabled);
+
+        // Next we construct an instance of our DeviceListener, so that we can register it with the Hub.
+        DataCollector collector;
+
+        // Hub::addListener() takes the address of any object whose class inherits from DeviceListener, and will cause
+        // Hub::run() to send events to all registered device listeners.
+        hub.addListener(&collector);
+
+        // Creates the CSV files for data saving, this will overide any existing files
+        collector.createCsvAcc("Output/Accelerometer.csv");
+        collector.createCsvEmg("Output/EMG.csv");
+        collector.createCsvGyro("Output/Gyroscope.csv");
+        collector.createCsvOrient("Output/Orientation.csv");
+
+        // Quick and dirty way of preventing previous consol output from deleted by print()
+        std::cout << "\n\n\n\n\n";
+
+        // Initializes couter for console output
+        int counter = 0;
+
+        // Finally we enter our main loop.
+        while (1) {
+
+            // In each iteration of our main loop, we run the Myo event loop for a set number of milliseconds.
+            // In this case, we wish to update our display 50 times a second, so we run for 1000/20 milliseconds.
+            hub.runOnce(10);
+
+            // Updates the console output using data recieved at this moment 
+            // This is only done every 30 cycles of the main loop to improve legibility
+            if (counter > 30) {
+                collector.print();
+                counter = 0;
+            }
+            counter += 1;
+        }
+
+
+        // If a standard exception occurred, we print out its message and exit.
+    }
+    catch (const std::exception & e) {
         std::cerr << "Error: " << e.what() << std::endl;
         std::cerr << "Press enter to continue.";
         std::cin.ignore();
