@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\richtext\CMakeFiles\wxrichtext.dir\cmake_pch.cxx">
+      <Filter>CMake</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextbuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextctrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextformatdlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtexthtml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextimagedlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextprint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextstyledlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextstyles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextsymboldlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\richtext\richtextxml.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\xrc\xh_richtext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextbackgroundpage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextborderspage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextbuffer.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextbulletspage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextctrl.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextdialogpage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextfontpage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextformatdlg.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtexthtml.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextimagedlg.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextindentspage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextliststylepage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextmarginspage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextprint.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextsizepage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextstyledlg.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextstylepage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextstyles.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextsymboldlg.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtexttabspage.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextuicustomization.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\richtext\richtextxml.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xrc\xh_richtext.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu\wx\setup.h">
+      <Filter>Setup Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\genrcdefs.h">
+      <Filter>MSW Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\richtext\CMakeFiles\wxrichtext.dir\Debug\cmake_pch.hxx">
+      <Filter>CMake</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\richtext\CMakeFiles\wxrichtext.dir\Release\cmake_pch.hxx">
+      <Filter>CMake</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\lib\richtext\CMakeLists.txt">
+      <Filter>CMake</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake">
+      <UniqueIdentifier>{D2AA8F1A-FB3E-3E6D-A902-EB089F744EF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Headers">
+      <UniqueIdentifier>{BF5F8A71-31B1-36D2-B78D-94F71B1D20E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSW Headers">
+      <UniqueIdentifier>{71FDC6A6-BC52-3D22-A12E-B4575313908F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{FDC1068A-2132-3F6A-A9DA-C00F1A0699A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Setup Headers">
+      <UniqueIdentifier>{1BE3787A-1856-3884-9022-FA8B84D4FD72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{821A6E68-1767-3FDE-B48C-0276820751BE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

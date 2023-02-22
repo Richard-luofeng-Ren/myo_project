@@ -1,0 +1,748 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1CFD914A-601B-3C68-8360-B9F839B5FAC2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>scintilla</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wxscintilla.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wxscintillad</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wxscintilla.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wxscintilla</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswud;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\include;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/wxscintilla.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE=1;_SCL_SECURE_NO_WARNINGS=1;NO_CXX11_REGEX;__WX__;SCI_LEXER;LINK_LEXERS;WX_PRECOMP;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE=1;_SCL_SECURE_NO_WARNINGS=1;NO_CXX11_REGEX;__WX__;SCI_LEXER;LINK_LEXERS;WX_PRECOMP;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswud;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\include;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswud;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\include;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\include;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/wxscintilla.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE=1;_SCL_SECURE_NO_WARNINGS=1;NO_CXX11_REGEX;__WX__;SCI_LEXER;LINK_LEXERS;WX_PRECOMP;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE=1;_SCL_SECURE_NO_WARNINGS=1;NO_CXX11_REGEX;__WX__;SCI_LEXER;LINK_LEXERS;WX_PRECOMP;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\include;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\include;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\lib\stc\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/build/cmake/lib/stc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets -BC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install --check-stamp-file C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\stc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/build/cmake/lib/stc/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets -BC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install --check-stamp-file C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\stc\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\stc\CMakeFiles\wxscintilla.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/wxscintilla.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/wxscintilla.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexA68k.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexAbaqus.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexAda.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexAPDL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexAsm.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexAsn1.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexASY.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexAU3.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexAVE.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexAVS.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexBaan.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexBash.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexBasic.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexBatch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexBibTeX.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexBullant.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCaml.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCLW.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCmake.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCOBOL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCoffeeScript.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexConf.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCPP.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCrontab.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCsound.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexCSS.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexD.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexDiff.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexDMAP.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexDMIS.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexECL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexEDIFACT.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexEiffel.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexErlang.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexErrorList.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexEScript.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexFlagship.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexForth.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexFortran.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexGAP.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexGui4Cli.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexHaskell.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexHex.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexHTML.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexInno.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexJSON.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexKix.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexKVIrc.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexLaTeX.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexLisp.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexLout.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexLua.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMagik.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMake.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMarkdown.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMatlab.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMetapost.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMMIXAL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexModula.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMPT.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMSSQL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexMySQL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexNimrod.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexNsis.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexNull.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexOpal.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexOScript.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPascal.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPB.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPerl.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPLM.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPO.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPOV.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPowerPro.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPowerShell.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexProgress.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexProps.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPS.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexPython.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexR.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexRebol.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexRegistry.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexRuby.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexRust.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexScriptol.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexSmalltalk.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexSML.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexSorcus.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexSpecman.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexSpice.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexSQL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexSTTXT.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexTACL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexTADS3.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexTAL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexTCL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexTCMD.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexTeX.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexTxt2tags.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexVB.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexVerilog.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexVHDL.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexVisualProlog.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexers\LexYAML.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\Accessor.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\CharacterCategory.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\CharacterSet.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\LexerBase.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\LexerModule.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\LexerNoExceptions.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\LexerSimple.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\PropSetSimple.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\StyleContext.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\lexlib\WordList.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\AutoComplete.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\CallTip.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\CaseConvert.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\CaseFolder.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\Catalogue.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\CellBuffer.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\CharClassify.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\ContractionState.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\Decoration.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\Document.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\EditModel.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\EditView.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\Editor.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\ExternalLexer.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\Indicator.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\KeyMap.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\LineMarker.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\MarginView.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\PerLine.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\PositionCache.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\RESearch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\RunStyles.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\ScintillaBase.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\Selection.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\Style.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\UniConversion.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\ViewStyle.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\stc\scintilla\src\XPM.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/stc/CMakeFiles/wxscintilla.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\stc\CMakeFiles\wxscintilla.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\stc\CMakeFiles\wxscintilla.dir\Release\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\ZERO_CHECK.vcxproj">
+      <Project>{CA90E8BC-5AF8-3246-A143-E4E1AF518819}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

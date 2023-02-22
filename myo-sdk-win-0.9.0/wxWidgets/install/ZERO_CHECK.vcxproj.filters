@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\8293adb909bde2bd60c1cd95e9324ad6\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{88741E54-063A-384C-A815-0D1714DF8BCA}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

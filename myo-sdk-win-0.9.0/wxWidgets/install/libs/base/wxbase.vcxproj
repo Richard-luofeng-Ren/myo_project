@@ -1,0 +1,876 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A0BB5FB3-AF0D-3F7D-B1F2-E707DE5858E3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>base</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wxbase.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">wxbase32ud_vc_custom</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wxbase.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">wxbase32u_vc_custom</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\3rdparty\pcre\src\wx;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\zlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswud;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/wxbase.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;WXDLLNAME=wxbase32ud_vc_custom;WXBUILDING;wxUSE_GUI=0;wxUSE_BASE=1;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE=1;_CRT_NON_CONFORMING_SWPRINTFS=1;_SCL_SECURE_NO_WARNINGS=1;_WINSOCK_DEPRECATED_NO_WARNINGS=1;__WXMSW__;WXMAKINGDLL_BASE;WX_PRECOMP;CMAKE_INTDIR="Debug";wxbase_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;WXDLLNAME=wxbase32ud_vc_custom;WXBUILDING;wxUSE_GUI=0;wxUSE_BASE=1;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE=1;_CRT_NON_CONFORMING_SWPRINTFS=1;_SCL_SECURE_NO_WARNINGS=1;_WINSOCK_DEPRECATED_NO_WARNINGS=1;__WXMSW__;WXMAKINGDLL_BASE;WX_PRECOMP;CMAKE_INTDIR=\"Debug\";wxbase_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\3rdparty\pcre\src\wx;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\zlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswud;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\3rdparty\pcre\src\wx;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\zlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswud;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;shlwapi.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;version.lib;ws2_32.lib;wininet.lib;oleacc.lib;uxtheme.lib;..\..\lib\vc_x64_dll\wxzlibd.lib;..\..\lib\vc_x64_dll\wxregexud.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/lib/vc_x64_dll/wxbase32ud.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/lib/vc_x64_dll/wxbase32ud_vc_custom.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\3rdparty\pcre\src\wx;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\zlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/wxbase.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WXDLLNAME=wxbase32u_vc_custom;WXBUILDING;wxUSE_GUI=0;wxUSE_BASE=1;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE=1;_CRT_NON_CONFORMING_SWPRINTFS=1;_SCL_SECURE_NO_WARNINGS=1;_WINSOCK_DEPRECATED_NO_WARNINGS=1;__WXMSW__;WXMAKINGDLL_BASE;WX_PRECOMP;CMAKE_INTDIR="Release";wxbase_EXPORTS</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;WXDLLNAME=wxbase32u_vc_custom;WXBUILDING;wxUSE_GUI=0;wxUSE_BASE=1;UNICODE;_UNICODE;_CRT_SECURE_NO_DEPRECATE=1;_CRT_NON_CONFORMING_SWPRINTFS=1;_SCL_SECURE_NO_WARNINGS=1;_WINSOCK_DEPRECATED_NO_WARNINGS=1;__WXMSW__;WXMAKINGDLL_BASE;WX_PRECOMP;CMAKE_INTDIR=\"Release\";wxbase_EXPORTS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\3rdparty\pcre\src\wx;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\zlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\3rdparty\pcre\src\wx;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\zlib;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;comdlg32.lib;winspool.lib;winmm.lib;shell32.lib;shlwapi.lib;comctl32.lib;ole32.lib;oleaut32.lib;uuid.lib;rpcrt4.lib;advapi32.lib;version.lib;ws2_32.lib;wininet.lib;oleacc.lib;uxtheme.lib;..\..\lib\vc_x64_dll\wxzlib.lib;..\..\lib\vc_x64_dll\wxregexu.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/lib/vc_x64_dll/wxbase32u.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/lib/vc_x64_dll/wxbase32u_vc_custom.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\lib\base\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/build/cmake/lib/base/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets -BC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install --check-stamp-file C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\base\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/build/cmake/lib/base/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets -BC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install --check-stamp-file C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\base\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\base\CMakeFiles\wxbase.dir\cmake_pch.cxx">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/wxbase.dir/Debug/cmake_pch.pch</PrecompiledHeaderOutputFile>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/wxbase.dir/Release/cmake_pch.pch</PrecompiledHeaderOutputFile>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\any.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\appbase.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\arcall.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\arcfind.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\archive.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\arrstr.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\base64.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\clntdata.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\cmdline.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\config.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\convauto.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\datetime.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\datetimefmt.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\datstrm.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\dircmn.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\dynlib.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\dynload.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\encconv.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\evtloopcmn.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\extended.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\ffile.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\file.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\fileback.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\fileconf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\filefn.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\filename.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\filesys.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\filtall.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\filtfind.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\fmapbase.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\fs_arc.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\fs_filter.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\hash.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\hashmap.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\init.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\intl.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\ipcbase.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\languageinfo.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\list.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\log.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\longlong.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\memory.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\mimecmn.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\module.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\mstream.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\numformatter.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\object.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\platinfo.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\powercmn.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\process.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\regex.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\secretstore.cpp">
+      <ObjectFileName>$(IntDir)/__/__/__/__/src/common/secretstore.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\stdpbase.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\sstream.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\stdstream.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\stopwatch.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\strconv.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\stream.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\string.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\stringimpl.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\stringops.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\strvararg.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\sysopt.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\tarstrm.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\textbuf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\textfile.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\threadinfo.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\time.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\timercmn.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\timerimpl.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\tokenzr.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\translation.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\txtstrm.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\unichar.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\uri.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\ustring.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\variant.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\wfstream.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\wxcrt.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\wxprintf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\xlocale.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\xti.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\xtistrm.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\zipstrm.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\zstream.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\fswatchercmn.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\generic\fswatcherg.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\lzmastream.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\uilocale.cpp">
+      <ObjectFileName>$(IntDir)/__/__/__/__/src/common/uilocale.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\afterstd.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\any.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\anystr.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\app.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\apptrait.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\archive.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\arrimpl.cpp" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\arrstr.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\atomic.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\base64.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\beforestd.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\buffer.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\build.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\chartype.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\checkeddelete.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\chkconf.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\clntdata.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\cmdargs.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\cmdline.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\compiler.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\confbase.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\config.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\convauto.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\containr.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\cpp.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\crt.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\datetime.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\datstrm.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\dde.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\debug.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\defs.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\dir.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\dlimpexp.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\dlist.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\dynarray.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\dynlib.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\dynload.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\encconv.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\event.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\eventfilter.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\evtloop.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\evtloopsrc.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\except.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\features.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\flags.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ffile.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\file.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\fileconf.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\filefn.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\filename.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\filesys.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\fontenc.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\fontmap.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\fs_arc.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\fs_filter.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\fs_mem.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\fs_zip.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\hash.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\hashmap.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\hashset.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\iconloc.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\init.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\intl.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\iosfwrap.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ioswrap.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ipc.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ipcbase.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\kbdstate.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\language.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\link.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\list.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\listimpl.cpp" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\log.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\longlong.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\math.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\memconf.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\memory.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\memtext.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\mimetype.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\module.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\mousestate.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msgout.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msgqueue.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\mstream.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\numformatter.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\object.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\platform.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\platinfo.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\power.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\process.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ptr_scpd.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ptr_shrd.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\recguard.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\regex.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\rtti.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\scopedarray.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\scopedptr.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\scopeguard.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\secretstore.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\sharedptr.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\snglinst.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\sstream.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stack.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stackwalk.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stdpaths.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stdstream.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stockitem.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stopwatch.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\strconv.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stream.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\string.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stringimpl.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\stringops.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\strvararg.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\sysopt.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\tarstrm.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\textbuf.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\textfile.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\thread.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\thrimpl.cpp" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\time.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\timer.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\tls.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\tokenzr.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\tracker.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\translation.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\txtstrm.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\typeinfo.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\types.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\unichar.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\uri.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ustring.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\utils.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\variant.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\vector.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\version.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\versioninfo.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\volume.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\weakref.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\wfstream.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\wx.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\wxchar.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\wxcrt.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\wxcrtbase.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\wxcrtvararg.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\wxprec.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xlocale.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xti.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xti2.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xtistrm.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xtictor.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xtihandler.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xtiprop.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xtitypes.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\zipstrm.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\zstream.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\meta\convertible.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\meta\if.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\meta\implicitconversion.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\meta\int2type.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\meta\movable.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\meta\pod.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\meta\removeref.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\fswatcher.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\generic\fswatcher.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\lzmastream.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\localedefs.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\uilocale.h" />
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\event.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\fs_mem.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\msgout.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\utilscmn.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\basemsw.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\crashrpt.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\debughlp.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\dde.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\dir.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\dlmsw.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\evtloopconsole.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\mimetype.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\power.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\regconf.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\registry.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\secretstore.cpp">
+      <ObjectFileName>$(IntDir)/__/__/__/__/src/msw/secretstore.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\snglinst.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\stackwalk.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\stdpaths.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\thread.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\timer.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\utils.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\utilsexc.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\fswatcher.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\uilocale.cpp">
+      <ObjectFileName>$(IntDir)/__/__/__/__/src/msw/uilocale.cpp.obj</ObjectFileName>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\apptrait.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\apptbase.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\chkconf.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\crashrpt.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\dde.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\debughlp.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\evtloopconsole.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\gccpriv.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\libraries.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\mimetype.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\private.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\regconf.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\registry.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\seh.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\stackwalk.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\stdpaths.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\winundef.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\winver.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\wrapcctl.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\wrapcdlg.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\wrapwin.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\fswatcher.h" />
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\main.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\volume.cpp">
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Debug/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/libs/base/CMakeFiles/wxbase.dir/Release/cmake_pch.hxx;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu\wx\setup.h" />
+    <ResourceCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\version.rc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ResourceCompile>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\genrcdefs.h" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\base\CMakeFiles\wxbase.dir\Debug\cmake_pch.hxx" />
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\base\CMakeFiles\wxbase.dir\Release\cmake_pch.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\ZERO_CHECK.vcxproj">
+      <Project>{CA90E8BC-5AF8-3246-A143-E4E1AF518819}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\wxregex.vcxproj">
+      <Project>{DFDBBE52-1BDE-3C67-A3B5-7D2B1228D3E9}</Project>
+      <Name>wxregex</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\wxzlib.vcxproj">
+      <Project>{A3CA04D8-3727-362F-B8C7-9C1B3CE253EB}</Project>
+      <Name>wxzlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

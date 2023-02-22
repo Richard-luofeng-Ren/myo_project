@@ -10,10 +10,219 @@
 #include <sstream>
 #include <stdexcept>
 #include <string>
+#include <thread>
 
 #include <stdio.h>
 #include <myo/myo.hpp>
 
+
+//code for WX
+#define WXUSINGDLL
+#include <wx/wxprec.h>
+#ifndef WX_PRECOMP
+#include <wx/wx.h>
+#endif
+
+//Global variables:
+wxString test_string = "a";
+const int data_point_amount = 500;
+const int margin = 100;
+int graph_counter = 0;
+std::array<int8_t, data_point_amount> graph_emg_1 = { 0 };
+std::array<int8_t, data_point_amount> graph_emg_2 = { 0 };
+std::array<int8_t, data_point_amount> graph_emg_3 = { 0 };
+std::array<int8_t, data_point_amount> graph_emg_4 = { 0 };
+std::array<int8_t, data_point_amount> graph_emg_5 = { 0 };
+std::array<int8_t, data_point_amount> graph_emg_6 = { 0 };
+std::array<int8_t, data_point_amount> graph_emg_7 = { 0 };
+std::array<int8_t, data_point_amount> graph_emg_8 = { 0 };
+
+//Global functions:
+void stepGraphCounter(){
+    if (graph_counter < data_point_amount - 1) {
+        graph_counter += 1;
+    }
+    else {
+        graph_counter = 0;
+    }
+}
+
+void setGraphEmg(std::array<int8_t, 8> value) {
+        graph_emg_1[graph_counter] = value[0];
+        graph_emg_2[graph_counter] = value[1];
+        graph_emg_3[graph_counter] = value[2];
+        graph_emg_4[graph_counter] = value[3];
+        graph_emg_5[graph_counter] = value[4];
+        graph_emg_6[graph_counter] = value[5];
+        graph_emg_7[graph_counter] = value[6];
+        graph_emg_8[graph_counter] = value[7];
+}
+
+
+class MyApp : public wxApp
+{
+public:
+    virtual bool OnInit();
+    void setString(wxString input);
+};
+
+class MyFrame : public wxFrame
+{
+    wxTimer* m_timer;
+public:
+    MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size, const wxString& statusText);
+private:
+    void OnTimer(wxTimerEvent& event);
+    void OnPaint(wxPaintEvent& event);
+    void OnHello(wxCommandEvent& event);
+    void OnExit(wxCommandEvent& event);
+    void OnAbout(wxCommandEvent& event);
+    wxDECLARE_EVENT_TABLE();
+};
+
+enum
+{
+    ID_Hello = 1
+};
+
+wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
+EVT_MENU(ID_Hello, MyFrame::OnHello)
+EVT_MENU(wxID_EXIT, MyFrame::OnExit)
+EVT_MENU(wxID_ABOUT, MyFrame::OnAbout)
+EVT_PAINT(MyFrame::OnPaint)
+wxEND_EVENT_TABLE()
+
+wxIMPLEMENT_APP_NO_MAIN(MyApp);
+
+bool MyApp::OnInit()
+{
+    MyFrame* frame = new MyFrame("EMG Graph", wxPoint(50, 50), wxSize(450, 340), "graphing");
+    frame->Show(true);
+    return true;
+}
+
+MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size, const wxString& statusText)
+    : wxFrame(NULL, wxID_ANY, title, pos, size)
+{
+    wxMenu* menuFile = new wxMenu;
+    menuFile->Append(ID_Hello, "&Hello...\tCtrl-H",
+        "Help string shown in status bar for this menu item");
+    menuFile->AppendSeparator();
+    menuFile->Append(wxID_EXIT);
+    wxMenu* menuHelp = new wxMenu;
+    menuHelp->Append(wxID_ABOUT);
+    wxMenuBar* menuBar = new wxMenuBar;
+    menuBar->Append(menuFile, "&File");
+    menuBar->Append(menuHelp, "&Help");
+    SetMenuBar(menuBar);
+    CreateStatusBar();
+    SetStatusText(statusText);
+
+    m_timer = new wxTimer(this, wxID_ANY);
+    m_timer->Start(20); 
+    Bind(wxEVT_TIMER, &MyFrame::OnTimer, this, m_timer->GetId());
+}
+
+void MyFrame::OnExit(wxCommandEvent& event)
+{
+    Close(true);
+}
+
+void MyFrame::OnAbout(wxCommandEvent& event)
+{
+    wxMessageBox("This is a wxWidgets' Hello world sample",
+        "About Hello World", wxOK | wxICON_INFORMATION);
+}
+
+void MyFrame::OnHello(wxCommandEvent& event)
+{
+    wxLogMessage("Hello world from wxWidgets!");
+}
+
+void MyFrame::OnPaint(wxPaintEvent& event) {
+    wxPen emg1(wxColour(255, 0, 0));
+    wxPen emg2(wxColour(0, 150, 0));
+    wxPen emg3(wxColour(0, 0, 150));
+    wxPen emg4(wxColour(255, 150, 0));
+    wxPen emg5(wxColour(0, 150, 150));
+    wxPen emg6(wxColour(255, 0, 150));
+    wxPen emg7(wxColour(100, 150, 0));
+    wxPen emg8(wxColour(0, 150, 50));
+    wxPaintDC dc(this);
+
+    dc.SetPen(emg1);
+
+    for (int i = 0; i < 15; i++) {
+        if (graph_counter - i > 0) {
+            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_1[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_1[graph_counter - i - 1]) + 256);
+        }
+    }
+
+    dc.SetPen(emg2);
+
+    for (int i = 0; i < 15; i++) {
+        if (graph_counter - i > 0) {
+            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_2[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_2[graph_counter - i - 1]) + 256);
+        }
+    }
+
+    dc.SetPen(emg3);
+
+    for (int i = 0; i < 15; i++) {
+        if (graph_counter - i > 0) {
+            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_3[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_3[graph_counter - i - 1]) + 256);
+        }
+    }
+
+    dc.SetPen(emg4);
+
+    for (int i = 0; i < 15; i++) {
+        if (graph_counter - i > 0) {
+            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_4[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_4[graph_counter - i - 1]) + 256);
+        }
+    }
+
+    dc.SetPen(emg5);
+
+    for (int i = 0; i < 15; i++) {
+        if (graph_counter - i > 0) {
+            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_5[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_5[graph_counter - i - 1]) + 256);
+        }
+    }
+    
+    dc.SetPen(emg6);
+
+    for (int i = 0; i < 15; i++) {
+        if (graph_counter - i > 0) {
+            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_6[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_6[graph_counter - i - 1]) + 256);
+        }
+    }
+
+    dc.SetPen(emg7);
+
+    for (int i = 0; i < 15; i++) {
+        if (graph_counter - i > 0) {
+            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_7[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_7[graph_counter - i - 1]) + 256);
+        }
+    }
+
+    dc.SetPen(emg8);
+
+    for (int i = 0; i < 15; i++) {
+        if (graph_counter - i > 0) {
+            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_8[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_8[graph_counter - i - 1]) + 256);
+        }
+    }
+    
+}
+
+void MyFrame::OnTimer(wxTimerEvent& event) {
+    const wxRect rect1 = wxRect(margin + ((graph_counter - 10) * 2), 128, 42 * 2, 256);
+    const wxRect* pRect1 = &rect1;
+    Refresh(true, pRect1);
+}
+
+//myo code starts here
 class DataCollector : public myo::DeviceListener {
 public:
 
@@ -223,6 +432,9 @@ public:
             emgSamples[i] = emg[i];
         }
 
+        stepGraphCounter();
+        setGraphEmg(emgSamples);
+
         //Converts emgSamples array into a string with CSV compatible formatting stored in EMG_tmp
         for (size_t i = 0; i < emgSamples.size(); i++) {
             std::ostringstream oss;
@@ -418,6 +630,13 @@ public:
             std::string emgString = oss.str();
             std::cout << '[' << emgString << std::string(4 - emgString.size(), ' ') << ']';
         }
+
+        std::ostringstream oss;
+        oss << static_cast<float>(graph_emg_1[1]);
+        std::string emgString = oss.str();
+        std::cout << emgString;
+        std::cout << std::to_string(graph_counter);
+
         //Informs the user if data saving is occuring correctly
         if (EMG_saving == true) {
             //When data saving is normal, informs the user if data had been modified by correction mechenism
@@ -562,6 +781,11 @@ public:
 
 int main(int argc, char** argv)
 {
+    std::thread graphThread([&]() {
+        wxEntry();
+    });
+    graphThread.detach();
+
     // We catch any exceptions that might occur below -- see the catch statement for more details.
     try {
 
@@ -609,6 +833,8 @@ int main(int argc, char** argv)
 
         // Finally we enter our main loop.
         while (1) {
+
+            test_string = std::to_string(counter);
 
             // In each iteration of our main loop, we run the Myo event loop for a set number of milliseconds.
             // In this case, we wish to update our display 50 times a second, so we run for 1000/20 milliseconds.

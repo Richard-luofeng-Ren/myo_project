@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\ribbon\CMakeFiles\wxribbon.dir\cmake_pch.cxx">
+      <Filter>CMake</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\art_internal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\art_msw.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\art_aui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\bar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\buttonbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\control.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\gallery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\page.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\panel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\ribbon\toolbar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\xrc\xh_ribbon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\art.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\art_internal.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\bar.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\buttonbar.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\control.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\gallery.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\page.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\panel.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\ribbon\toolbar.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\xrc\xh_ribbon.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu\wx\setup.h">
+      <Filter>Setup Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\genrcdefs.h">
+      <Filter>MSW Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\ribbon\CMakeFiles\wxribbon.dir\Debug\cmake_pch.hxx">
+      <Filter>CMake</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\ribbon\CMakeFiles\wxribbon.dir\Release\cmake_pch.hxx">
+      <Filter>CMake</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\lib\ribbon\CMakeLists.txt">
+      <Filter>CMake</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake">
+      <UniqueIdentifier>{D2AA8F1A-FB3E-3E6D-A902-EB089F744EF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Headers">
+      <UniqueIdentifier>{BF5F8A71-31B1-36D2-B78D-94F71B1D20E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSW Headers">
+      <UniqueIdentifier>{71FDC6A6-BC52-3D22-A12E-B4575313908F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{FDC1068A-2132-3F6A-A9DA-C00F1A0699A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Setup Headers">
+      <UniqueIdentifier>{1BE3787A-1856-3884-9022-FA8B84D4FD72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{821A6E68-1767-3FDE-B48C-0276820751BE}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

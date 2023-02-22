@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\html\CMakeFiles\wxhtml.dir\cmake_pch.cxx">
+      <Filter>CMake</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\helpctrl.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\helpdata.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\helpdlg.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\helpfrm.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\helpwnd.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\htmlcell.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\htmlfilt.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\htmlpars.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\htmltag.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\htmlwin.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\htmprint.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_dflist.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_fonts.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_hline.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_image.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_layout.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_links.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_list.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_pre.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_span.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_style.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\m_tables.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\styleparams.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\winpars.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\generic\htmllbox.cpp">
+      <Filter>Generic Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\helpbest.cpp">
+      <Filter>MSW Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\html\chm.cpp">
+      <Filter>wxHTML Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\forcelnk.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\helpctrl.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\helpdata.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\helpdlg.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\helpfrm.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\helpwnd.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\htmlcell.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\htmldefs.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\htmlfilt.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\htmlpars.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\htmlproc.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\htmltag.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\htmlwin.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\htmprint.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\m_templ.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\styleparams.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\html\winpars.h">
+      <Filter>wxHTML Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\wxhtml.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\htmllbox.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\helpbest.h">
+      <Filter>MSW Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu\wx\setup.h">
+      <Filter>Setup Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\genrcdefs.h">
+      <Filter>MSW Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\html\CMakeFiles\wxhtml.dir\Debug\cmake_pch.hxx">
+      <Filter>CMake</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\html\CMakeFiles\wxhtml.dir\Release\cmake_pch.hxx">
+      <Filter>CMake</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\lib\html\CMakeLists.txt">
+      <Filter>CMake</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake">
+      <UniqueIdentifier>{D2AA8F1A-FB3E-3E6D-A902-EB089F744EF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Headers">
+      <UniqueIdentifier>{BF5F8A71-31B1-36D2-B78D-94F71B1D20E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generic Sources">
+      <UniqueIdentifier>{AF95581D-B269-3112-9FAC-9B8DBB0356F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSW Headers">
+      <UniqueIdentifier>{71FDC6A6-BC52-3D22-A12E-B4575313908F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSW Sources">
+      <UniqueIdentifier>{BC082344-A558-366F-9EEA-E9B6F2552F69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{FDC1068A-2132-3F6A-A9DA-C00F1A0699A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Setup Headers">
+      <UniqueIdentifier>{1BE3787A-1856-3884-9022-FA8B84D4FD72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wxHTML Headers">
+      <UniqueIdentifier>{AD720113-2A2A-317F-B63C-1B161EB41CCE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="wxHTML Sources">
+      <UniqueIdentifier>{FECC6D33-B5AC-37D2-9EAD-77F69A77F80F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

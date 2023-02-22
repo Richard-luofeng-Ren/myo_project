@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2B513AA0-2A3E-31CC-B72A-A002CEB0F554}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22000.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets -BC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install --check-stamp-file C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\BasicConfigVersion-SameMinorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakePrintHelpers.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckPrototypeDefinition.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\build.cfg.in;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\build_cfg.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\files.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\functions.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\init.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\install.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\main.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\options.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\pch.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\policies.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\setup.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\setup.h.in;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\source_groups.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\toolkit.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\uninstall.cmake.in;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\wxWidgetsConfig.cmake.in;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\3.25.1\CMakeCCompiler.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\3.25.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets -BC:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install --check-stamp-file C:/Users/Richard/Desktop/myoProject/myo-sdk-win-0.9.0/wxWidgets/install/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.25\Modules\BasicConfigVersion-SameMinorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCCompilerABI.c;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeCompilerIdDetection.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompileFeatures.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerABI.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineCompilerId.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeDetermineSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeFindBinUtils.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeParseLibraryArchitecture.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakePrintHelpers.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakePushCheckState.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCCompiler.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystem.cmake.in;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCXXCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestCompilerCommon.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CMakeTestRCCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckCXXSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckFunctionExists.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckIncludeFiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckPrototypeDefinition.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckStructHasMember.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckSymbolExists.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\ARMClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\FujitsuClang-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IBMClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\IntelLLVM-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\LCC-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVHPC-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Tasking-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\XLClang-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\CompilerId\VS-10.vcxproj.in;C:\Program Files\CMake\share\cmake-3.25\Modules\ExternalProject.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckCompilerFlag.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Internal\FeatureTesting.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-Determine-CXX.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\Platform\WindowsPaths.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\TestBigEndian.cmake;C:\Program Files\CMake\share\cmake-3.25\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\build.cfg.in;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\build_cfg.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\files.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\functions.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\init.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\install.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\main.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\options.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\pch.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\policies.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\setup.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\setup.h.in;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\source_groups.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\toolkit.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\uninstall.cmake.in;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\wxWidgetsConfig.cmake.in;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\3.25.1\CMakeCCompiler.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\3.25.1\CMakeCXXCompiler.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\3.25.1\CMakeRCCompiler.cmake;C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\3.25.1\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\ZERO_CHECK.vcxproj">
+      <Project>{CA90E8BC-5AF8-3246-A143-E4E1AF518819}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\adv\wxadv.vcxproj">
+      <Project>{DBB20B95-D4EF-33D8-963F-F14FCAA8E084}</Project>
+      <Name>wxadv</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\aui\wxaui.vcxproj">
+      <Project>{1FC894ED-D02F-38A3-B5F4-AA2BE3E6A0E4}</Project>
+      <Name>wxaui</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\base\wxbase.vcxproj">
+      <Project>{A0BB5FB3-AF0D-3F7D-B1F2-E707DE5858E3}</Project>
+      <Name>wxbase</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\core\wxcore.vcxproj">
+      <Project>{AF844B44-D364-3F78-AF7B-1E25D82EEE8A}</Project>
+      <Name>wxcore</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\wxexpat.vcxproj">
+      <Project>{9D115F88-06B0-3B96-98B7-6020110629E4}</Project>
+      <Name>wxexpat</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\gl\wxgl.vcxproj">
+      <Project>{EB3D88CE-3359-3EC8-9396-52657FE0E7A6}</Project>
+      <Name>wxgl</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\html\wxhtml.vcxproj">
+      <Project>{539F1948-6B09-3E45-A3A7-A0062E6CEB14}</Project>
+      <Name>wxhtml</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\wxjpeg.vcxproj">
+      <Project>{48926F93-1990-3699-BAC5-A3A0655E2B1C}</Project>
+      <Name>wxjpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\media\wxmedia.vcxproj">
+      <Project>{B4C40DF5-1241-334F-BA7C-AF340E098033}</Project>
+      <Name>wxmedia</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\net\wxnet.vcxproj">
+      <Project>{9CAFEC18-35BB-320E-BAFE-511CBE941AF8}</Project>
+      <Name>wxnet</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\wxpng.vcxproj">
+      <Project>{A08A643C-4E46-3B11-8362-E098D93347F1}</Project>
+      <Name>wxpng</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\propgrid\wxpropgrid.vcxproj">
+      <Project>{CA830EA8-5BCD-342E-9C37-7B0A55AB03BA}</Project>
+      <Name>wxpropgrid</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\qa\wxqa.vcxproj">
+      <Project>{E6BA8A91-0653-327C-AB80-90F94708D21F}</Project>
+      <Name>wxqa</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\utils\wxrc.vcxproj">
+      <Project>{BD23FB14-2885-3493-9607-1C4D47B4747D}</Project>
+      <Name>wxrc</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\wxregex.vcxproj">
+      <Project>{DFDBBE52-1BDE-3C67-A3B5-7D2B1228D3E9}</Project>
+      <Name>wxregex</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\ribbon\wxribbon.vcxproj">
+      <Project>{25D097A1-8719-3815-928C-845685ED0D63}</Project>
+      <Name>wxribbon</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\richtext\wxrichtext.vcxproj">
+      <Project>{444809B4-6792-3687-940E-15C675B48740}</Project>
+      <Name>wxrichtext</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\stc\wxscintilla.vcxproj">
+      <Project>{1CFD914A-601B-3C68-8360-B9F839B5FAC2}</Project>
+      <Name>wxscintilla</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\stc\wxstc.vcxproj">
+      <Project>{F713C954-672F-37DC-B98C-53EFC12CBEAE}</Project>
+      <Name>wxstc</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\wxtiff.vcxproj">
+      <Project>{E5B00400-3176-3AE4-B12C-3DC0AB8F3AE0}</Project>
+      <Name>wxtiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\webview\wxwebview.vcxproj">
+      <Project>{227151E0-852D-31D2-8FED-AFBA3C0E5B9B}</Project>
+      <Name>wxwebview</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\xml\wxxml.vcxproj">
+      <Project>{A6CAD69C-B212-3748-A053-3E71E3B31E04}</Project>
+      <Name>wxxml</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\xrc\wxxrc.vcxproj">
+      <Project>{FD440D7E-E32A-3B72-B350-DCF6F5AE2DF5}</Project>
+      <Name>wxxrc</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\wxzlib.vcxproj">
+      <Project>{A3CA04D8-3727-362F-B8C7-9C1B3CE253EB}</Project>
+      <Name>wxzlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

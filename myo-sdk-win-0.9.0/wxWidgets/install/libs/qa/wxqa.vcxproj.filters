@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\qa\CMakeFiles\wxqa.dir\cmake_pch.cxx">
+      <Filter>CMake</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\common\debugrpt.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\generic\dbgrptg.cpp">
+      <Filter>Generic Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\debugrpt.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\lib\vc_x64_dll\mswu\wx\setup.h">
+      <Filter>Setup Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\include\wx\msw\genrcdefs.h">
+      <Filter>MSW Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\qa\CMakeFiles\wxqa.dir\Debug\cmake_pch.hxx">
+      <Filter>CMake</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\install\libs\qa\CMakeFiles\wxqa.dir\Release\cmake_pch.hxx">
+      <Filter>CMake</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\build\cmake\lib\qa\CMakeLists.txt">
+      <Filter>CMake</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\Richard\Desktop\myoProject\myo-sdk-win-0.9.0\wxWidgets\src\msw\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake">
+      <UniqueIdentifier>{D2AA8F1A-FB3E-3E6D-A902-EB089F744EF2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Headers">
+      <UniqueIdentifier>{BF5F8A71-31B1-36D2-B78D-94F71B1D20E9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Sources">
+      <UniqueIdentifier>{E04E83A4-B667-3804-99EC-9D0D8387B751}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generic Sources">
+      <UniqueIdentifier>{AF95581D-B269-3112-9FAC-9B8DBB0356F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MSW Headers">
+      <UniqueIdentifier>{71FDC6A6-BC52-3D22-A12E-B4575313908F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{FDC1068A-2132-3F6A-A9DA-C00F1A0699A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Setup Headers">
+      <UniqueIdentifier>{1BE3787A-1856-3884-9022-FA8B84D4FD72}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

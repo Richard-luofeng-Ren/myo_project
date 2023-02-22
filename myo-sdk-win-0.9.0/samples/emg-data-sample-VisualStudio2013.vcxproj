@@ -68,6 +68,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Richard\Desktop\wx-test\wxWidgets\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
@@ -79,13 +80,13 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\wxWidgets\install\lib\vc_x64_dll\mswud;..\wxWidgets\include;..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>myo64.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>wxbase32ud.lib;wxmsw32ud_core.lib;myo64.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\wxWidgets\install\lib\vc_x64_dll;..\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>COPY "..\bin\myo64.dll" "$(OutDir)"
@@ -120,15 +121,15 @@
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Richard\Desktop\wx-test\wxWidgets\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>myo64.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>myo64.lib;wxmsw32ud_core;wxbase32ud.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\wxWidgets\install\lib\vc_x64_dll;..\lib</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
       <Command>COPY "..\bin\myo64.dll" "$(OutDir)"
