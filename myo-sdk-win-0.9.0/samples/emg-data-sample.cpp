@@ -27,6 +27,7 @@
 wxString test_string = "a";
 const int data_point_amount = 500;
 const int margin = 100;
+const int vert_pos = 300;
 int graph_counter = 0;
 std::array<int8_t, data_point_amount> graph_emg_1 = { 0 };
 std::array<int8_t, data_point_amount> graph_emg_2 = { 0 };
@@ -68,27 +69,57 @@ public:
 
 class MyFrame : public wxFrame
 {
-    wxTimer* m_timer;
 public:
     MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size, const wxString& statusText);
+    wxTimer* m_timer;
+    bool disp1 = true;
+    bool disp2 = true;
+    bool disp3 = true;
+    bool disp4 = true;
+    bool disp5 = true;
+    bool disp6 = true;
+    bool disp7 = true;
+    bool disp8 = true;
+
 private:
     void OnTimer(wxTimerEvent& event);
     void OnPaint(wxPaintEvent& event);
-    void OnHello(wxCommandEvent& event);
-    void OnExit(wxCommandEvent& event);
-    void OnAbout(wxCommandEvent& event);
+    void DispEmg1(wxCommandEvent& event);
+    void DispEmg2(wxCommandEvent& event);
+    void DispEmg3(wxCommandEvent& event);
+    void DispEmg4(wxCommandEvent& event);
+    void DispEmg5(wxCommandEvent& event);
+    void DispEmg6(wxCommandEvent& event);
+    void DispEmg7(wxCommandEvent& event);
+    void DispEmg8(wxCommandEvent& event);
+    void DispEmgClear(wxCommandEvent& event);
     wxDECLARE_EVENT_TABLE();
 };
 
 enum
 {
-    ID_Hello = 1
+    ID_EMG1 = 1,
+    ID_EMG2 = 2,
+    ID_EMG3 = 3,
+    ID_EMG4 = 4,
+    ID_EMG5 = 5,
+    ID_EMG6 = 6,
+    ID_EMG7 = 7,
+    ID_EMG8 = 8,
+    ID_EMG_C = 9
 };
 
 wxBEGIN_EVENT_TABLE(MyFrame, wxFrame)
-EVT_MENU(ID_Hello, MyFrame::OnHello)
-EVT_MENU(wxID_EXIT, MyFrame::OnExit)
-EVT_MENU(wxID_ABOUT, MyFrame::OnAbout)
+EVT_MENU(ID_EMG1, MyFrame::DispEmg1)
+EVT_MENU(ID_EMG2, MyFrame::DispEmg2)
+EVT_MENU(ID_EMG3, MyFrame::DispEmg3)
+EVT_MENU(ID_EMG4, MyFrame::DispEmg4)
+EVT_MENU(ID_EMG5, MyFrame::DispEmg5)
+EVT_MENU(ID_EMG6, MyFrame::DispEmg6)
+EVT_MENU(ID_EMG7, MyFrame::DispEmg7)
+EVT_MENU(ID_EMG8, MyFrame::DispEmg8)
+EVT_MENU(ID_EMG_C, MyFrame::DispEmgClear)
+
 EVT_PAINT(MyFrame::OnPaint)
 wxEND_EVENT_TABLE()
 
@@ -96,7 +127,7 @@ wxIMPLEMENT_APP_NO_MAIN(MyApp);
 
 bool MyApp::OnInit()
 {
-    MyFrame* frame = new MyFrame("EMG Graph", wxPoint(50, 50), wxSize(450, 340), "graphing");
+    MyFrame* frame = new MyFrame("EMG Graph", wxPoint(50, 50), wxSize(1200, 600), "graphing");
     frame->Show(true);
     return true;
 }
@@ -105,121 +136,306 @@ MyFrame::MyFrame(const wxString& title, const wxPoint& pos, const wxSize& size, 
     : wxFrame(NULL, wxID_ANY, title, pos, size)
 {
     wxMenu* menuFile = new wxMenu;
-    menuFile->Append(ID_Hello, "&Hello...\tCtrl-H",
-        "Help string shown in status bar for this menu item");
-    menuFile->AppendSeparator();
-    menuFile->Append(wxID_EXIT);
-    wxMenu* menuHelp = new wxMenu;
-    menuHelp->Append(wxID_ABOUT);
+    menuFile->Append(ID_EMG1, "EMG1...\t1",
+        "Toggle EMG Channel 1");
+
+    menuFile->Append(ID_EMG2, "EMG2...\t2",
+        "Toggle EMG Channel 2");
+
+    menuFile->Append(ID_EMG3, "EMG3...\t3",
+        "Toggle EMG Channel 3");
+
+    menuFile->Append(ID_EMG4, "EMG4...\t4",
+        "Toggle EMG Channel 4");
+
+    menuFile->Append(ID_EMG5, "EMG5...\t5",
+        "Toggle EMG Channel 5");
+
+    menuFile->Append(ID_EMG6, "EMG6...\t6",
+        "Toggle EMG Channel 6");
+
+    menuFile->Append(ID_EMG7, "EMG7...\t7",
+        "Toggle EMG Channel 7");
+
+    menuFile->Append(ID_EMG8, "EMG8...\t8",
+        "Toggle EMG Channel 8");
+
+    menuFile->Append(ID_EMG_C, "Clear...\t0",
+        "Clear All EMG Channels");
+
     wxMenuBar* menuBar = new wxMenuBar;
-    menuBar->Append(menuFile, "&File");
-    menuBar->Append(menuHelp, "&Help");
+    menuBar->Append(menuFile, "&Graph");
     SetMenuBar(menuBar);
     CreateStatusBar();
-    SetStatusText(statusText);
 
     m_timer = new wxTimer(this, wxID_ANY);
     m_timer->Start(20); 
     Bind(wxEVT_TIMER, &MyFrame::OnTimer, this, m_timer->GetId());
 }
 
-void MyFrame::OnExit(wxCommandEvent& event)
+void MyFrame::DispEmg1(wxCommandEvent& event)
 {
-    Close(true);
+    if (true == disp1) {
+        disp1 = false;
+    }
+    else {
+        disp1 = true;
+    }
 }
 
-void MyFrame::OnAbout(wxCommandEvent& event)
+void MyFrame::DispEmg2(wxCommandEvent& event)
 {
-    wxMessageBox("This is a wxWidgets' Hello world sample",
-        "About Hello World", wxOK | wxICON_INFORMATION);
+    if (true == disp2) {
+        disp2 = false;
+    }
+    else {
+        disp2 = true;
+    }
 }
 
-void MyFrame::OnHello(wxCommandEvent& event)
+void MyFrame::DispEmg3(wxCommandEvent& event)
 {
-    wxLogMessage("Hello world from wxWidgets!");
+    if (true == disp3) {
+        disp3 = false;
+    }
+    else {
+        disp3 = true;
+    }
+}
+
+void MyFrame::DispEmg4(wxCommandEvent& event)
+{
+    if (true == disp4) {
+        disp4 = false;
+    }
+    else {
+        disp4 = true;
+    }
+}
+
+void MyFrame::DispEmg5(wxCommandEvent& event)
+{
+    if (true == disp5) {
+        disp5 = false;
+    }
+    else {
+        disp5 = true;
+    }
+}
+
+void MyFrame::DispEmg6(wxCommandEvent& event)
+{
+    if (true == disp6) {
+        disp6 = false;
+    }
+    else {
+        disp6 = true;
+    }
+}
+
+void MyFrame::DispEmg7(wxCommandEvent& event)
+{
+    if (true == disp7) {
+        disp7 = false;
+    }
+    else {
+        disp7 = true;
+    }
+}
+
+void MyFrame::DispEmg8(wxCommandEvent& event)
+{
+    if (true == disp8) {
+        disp8 = false;
+    }
+    else {
+        disp8 = true;
+    }
+}
+
+void MyFrame::DispEmgClear(wxCommandEvent& event)
+{
+    disp1 = false;
+    disp2 = false;
+    disp3 = false;
+    disp4 = false;
+    disp5 = false;
+    disp6 = false;
+    disp7 = false;
+    disp8 = false;
 }
 
 void MyFrame::OnPaint(wxPaintEvent& event) {
     wxPen emg1(wxColour(255, 0, 0));
     wxPen emg2(wxColour(0, 150, 0));
-    wxPen emg3(wxColour(0, 0, 150));
-    wxPen emg4(wxColour(255, 150, 0));
-    wxPen emg5(wxColour(0, 150, 150));
+    wxPen emg3(wxColour(0, 0, 180));
+    wxPen emg4(wxColour(200, 100, 0));
+    wxPen emg5(wxColour(0, 180, 180));
     wxPen emg6(wxColour(255, 0, 150));
-    wxPen emg7(wxColour(100, 150, 0));
-    wxPen emg8(wxColour(0, 150, 50));
+    wxPen emg7(wxColour(150, 150, 50));
+    wxPen emg8(wxColour(0, 150, 110));
     wxPaintDC dc(this);
+    dc.SetFont(wxFont(8, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
 
-    dc.SetPen(emg1);
+    dc.SetTextForeground(wxColour(255, 0, 0));
+    dc.DrawText("EMG 1", 1000, 10);
+    if (true == disp1) {
+        dc.SetPen(emg1);
 
-    for (int i = 0; i < 15; i++) {
-        if (graph_counter - i > 0) {
-            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_1[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_1[graph_counter - i - 1]) + 256);
+        for (int i = 0; i < 15; i++) {
+            if (graph_counter - i > 0) {
+                dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_1[graph_counter - i]) + vert_pos, margin + (graph_counter - i) * 2 - 1, -(graph_emg_1[graph_counter - i - 1]) + vert_pos);
+            }
         }
+        dc.SetTextForeground(wxColour(0, 0, 0));
+        dc.DrawText("on", 1050, 10);
+    }
+    else {
+        dc.SetTextForeground(wxColour(80, 80, 80));
+        dc.DrawText("off", 1050, 10);
     }
 
-    dc.SetPen(emg2);
+    dc.SetTextForeground(wxColour(0, 150, 0));
+    dc.DrawText("EMG 2", 1000, 25);
+    if (true == disp2) {
+        dc.SetPen(emg2);
 
-    for (int i = 0; i < 15; i++) {
-        if (graph_counter - i > 0) {
-            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_2[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_2[graph_counter - i - 1]) + 256);
+        for (int i = 0; i < 15; i++) {
+            if (graph_counter - i > 0) {
+                dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_2[graph_counter - i]) + vert_pos, margin + (graph_counter - i) * 2 - 1, -(graph_emg_2[graph_counter - i - 1]) + vert_pos);
+            }
         }
+        dc.SetTextForeground(wxColour(0, 0, 0));
+        dc.DrawText("on", 1050, 25);
+    }
+    else {
+        dc.SetTextForeground(wxColour(80, 80, 80));
+        dc.DrawText("off", 1050, 25);
     }
 
-    dc.SetPen(emg3);
+    dc.SetTextForeground(wxColour(0, 0, 180));
+    dc.DrawText("EMG 3", 1000, 40);
+    if (true == disp3) {
 
-    for (int i = 0; i < 15; i++) {
-        if (graph_counter - i > 0) {
-            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_3[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_3[graph_counter - i - 1]) + 256);
+        dc.SetPen(emg3);
+
+        for (int i = 0; i < 15; i++) {
+            if (graph_counter - i > 0) {
+                dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_3[graph_counter - i]) + vert_pos, margin + (graph_counter - i) * 2 - 1, -(graph_emg_3[graph_counter - i - 1]) + vert_pos);
+            }
         }
+        dc.SetTextForeground(wxColour(0, 0, 0));
+        dc.DrawText("on", 1050, 40);
+    }
+    else {
+        dc.SetTextForeground(wxColour(80, 80, 80));
+        dc.DrawText("off", 1050, 40);
     }
 
-    dc.SetPen(emg4);
+    dc.SetTextForeground(wxColour(200, 100, 0));
+    dc.DrawText("EMG 4", 1000, 55);
+    if (true == disp4) {
+        dc.SetPen(emg4);
 
-    for (int i = 0; i < 15; i++) {
-        if (graph_counter - i > 0) {
-            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_4[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_4[graph_counter - i - 1]) + 256);
+        for (int i = 0; i < 15; i++) {
+            if (graph_counter - i > 0) {
+                dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_4[graph_counter - i]) + vert_pos, margin + (graph_counter - i) * 2 - 1, -(graph_emg_4[graph_counter - i - 1]) + vert_pos);
+            }
         }
+        dc.SetTextForeground(wxColour(0, 0, 0));
+        dc.DrawText("on", 1050, 55);
+    }
+    else {
+        dc.SetTextForeground(wxColour(80, 80, 80));
+        dc.DrawText("off", 1050, 55);
     }
 
-    dc.SetPen(emg5);
+    dc.SetTextForeground(wxColour(0, 180, 180));
+    dc.DrawText("EMG 5", 1000, 70);
+    if (true == disp5) {
 
-    for (int i = 0; i < 15; i++) {
-        if (graph_counter - i > 0) {
-            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_5[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_5[graph_counter - i - 1]) + 256);
+        dc.SetPen(emg5);
+
+        for (int i = 0; i < 15; i++) {
+            if (graph_counter - i > 0) {
+                dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_5[graph_counter - i]) + vert_pos, margin + (graph_counter - i) * 2 - 1, -(graph_emg_5[graph_counter - i - 1]) + vert_pos);
+            }
         }
+        dc.SetTextForeground(wxColour(0, 0, 0));
+        dc.DrawText("on", 1050, 70);
+    }
+    else {
+        dc.SetTextForeground(wxColour(80, 80, 80));
+        dc.DrawText("off", 1050, 70);
     }
     
-    dc.SetPen(emg6);
+    dc.SetTextForeground(wxColour(255, 0, 150));
+    dc.DrawText("EMG 6", 1000, 85);
+    if (true == disp6) {
 
-    for (int i = 0; i < 15; i++) {
-        if (graph_counter - i > 0) {
-            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_6[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_6[graph_counter - i - 1]) + 256);
+        dc.SetPen(emg6);
+
+        for (int i = 0; i < 15; i++) {
+            if (graph_counter - i > 0) {
+                dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_6[graph_counter - i]) + vert_pos, margin + (graph_counter - i) * 2 - 1, -(graph_emg_6[graph_counter - i - 1]) + vert_pos);
+            }
         }
+        dc.SetTextForeground(wxColour(0, 0, 0));
+        dc.DrawText("on", 1050, 85);
+    }
+    else {
+        dc.SetTextForeground(wxColour(80, 80, 80));
+        dc.DrawText("off", 1050, 85);
     }
 
-    dc.SetPen(emg7);
+    dc.SetTextForeground(wxColour(150, 150, 50));
+    dc.DrawText("EMG 7", 1000, 100);
+    if (true == disp7) {
 
-    for (int i = 0; i < 15; i++) {
-        if (graph_counter - i > 0) {
-            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_7[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_7[graph_counter - i - 1]) + 256);
+        dc.SetPen(emg7);
+
+        for (int i = 0; i < 15; i++) {
+            if (graph_counter - i > 0) {
+                dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_7[graph_counter - i]) + vert_pos, margin + (graph_counter - i) * 2 - 1, -(graph_emg_7[graph_counter - i - 1]) + vert_pos);
+            }
         }
+        dc.SetTextForeground(wxColour(0, 0, 0));
+        dc.DrawText("on", 1050, 100);
+    }
+    else {
+        dc.SetTextForeground(wxColour(80, 80, 80));
+        dc.DrawText("off", 1050, 100);
     }
 
-    dc.SetPen(emg8);
+    dc.SetTextForeground(wxColour(0, 150, 110));
+    dc.DrawText("EMG 8", 1000, 115);
+    if (true == disp8) {
 
-    for (int i = 0; i < 15; i++) {
-        if (graph_counter - i > 0) {
-            dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_8[graph_counter - i]) + 256, margin + (graph_counter - i) * 2 - 1, -(graph_emg_8[graph_counter - i - 1]) + 256);
+        dc.SetPen(emg8);
+
+        for (int i = 0; i < 15; i++) {
+            if (graph_counter - i > 0) {
+                dc.DrawLine(margin + (graph_counter - i) * 2, -(graph_emg_8[graph_counter - i]) + vert_pos, margin + (graph_counter - i) * 2 - 1, -(graph_emg_8[graph_counter - i - 1]) + vert_pos);
+            }
         }
+        dc.SetTextForeground(wxColour(0, 0, 0));
+        dc.DrawText("on", 1050, 115);
+    }
+    else {
+        dc.SetTextForeground(wxColour(80, 80, 80));
+        dc.DrawText("off", 1050, 115);
     }
     
 }
 
 void MyFrame::OnTimer(wxTimerEvent& event) {
-    const wxRect rect1 = wxRect(margin + ((graph_counter - 10) * 2), 128, 42 * 2, 256);
-    const wxRect* pRect1 = &rect1;
-    Refresh(true, pRect1);
+    const wxRect rect = wxRect(margin + ((graph_counter - 10) * 2), 128, 42, vert_pos);
+    const wxRect* pRect = &rect;
+    Refresh(true, pRect);
+
+    const wxRect legend = wxRect(1000, 10, 100, 120);
+    const wxRect* pLegend = &legend;
+    Refresh(true, pLegend);
 }
 
 //myo code starts here
